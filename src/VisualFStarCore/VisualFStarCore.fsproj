@@ -61,13 +61,18 @@
   <Import Project="..\..\.paket\paket.targets" />
   <ItemGroup>
     <Content Include="app.config" />
+    <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Core.fs" />
     <None Include="paket.references" />
     <None Include="paket.template" />
+    <None Include="VisualFStarCore.snk" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.PowerPack">
       <HintPath>..\..\FStar\bin\FSharp.PowerPack.dll</HintPath>
+    </Reference>
+    <Reference Include="FsLexYacc.Runtime">
+      <HintPath>..\..\packages\FsLexYacc.Runtime\lib\net40\FsLexYacc.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Package.LanguageService.14.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="mscorlib" />
@@ -79,12 +84,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FStar\src\tc\tc.fsproj">
-      <Name>tc</Name>
-      <Project>{5bf4af3f-bec2-4cfd-94b7-11a38a031f4b}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\FStar\src\parser\parser.fsproj">
+    <ProjectReference Include="..\..\FStar\src\parser\parser.fsproj">
       <Name>parser</Name>
       <Project>{9974a6de-6ca8-44b6-a52e-51fc52932179}</Project>
       <Private>True</Private>

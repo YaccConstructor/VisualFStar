@@ -22,3 +22,5 @@ let tokenize (fileName:string) str =
 //        r
 //          
     data
+
+do tokenize "" ""

@@ -66,25 +66,26 @@ internal class TestScanner : IScanner
     public TestScanner(IVsTextBuffer buffer)
     {
         m_buffer = buffer;
+       // VisualFStar.Core.tokenize(@"C:\gsv\projects\YC\FStar\VisualFStar\paket.lock", "");
     }
 
     bool IScanner.ScanTokenAndProvideInfoAboutIt(TokenInfo tokenInfo, ref int state)
     {
-        tokenInfo.Type = TokenType.Unknown;
-        tokenInfo.Color = TokenColor.Text;
-        return true;
+        //tokenInfo.Type = TokenType.Unknown;
+        //tokenInfo.Color = TokenColor.Text;
+        //return true;
 
-        //var r = tokens.Current;
-        //tokens.MoveNext();
-        //tokenInfo.Type = r.Item1;
-        //tokenInfo.Color = r.Item2;
-        //return r.Item3;
+        tokens.MoveNext();
+        var r = tokens.Current;        
+        tokenInfo.Type = r.Item1;
+        tokenInfo.Color = r.Item2;
+        return r.Item3;
     }
 
     void IScanner.SetSource(string source, int offset)
-    {
+    {        
         m_source = source.Substring(offset);
-        //tokens = VisualFStar.Core.tokenize("", source).GetEnumerator();        
+        tokens = VisualFStar.Core.tokenize(@"C:\gsv\projects\YC\FStar\VisualFStar\paket.lock", m_source).GetEnumerator();
     }
 }
 
