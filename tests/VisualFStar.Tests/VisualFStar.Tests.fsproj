@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -70,13 +70,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\VisualFStar\VisualFStar.fsproj">
-      <Name>VisualFStar</Name>
-      <Project>{d15fb8f5-a949-4c05-866b-ece1ec8125c5}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-  </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -91,5 +84,12 @@
       <Private>True</Private>
       <Paket>True</Paket>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\VisualFStar\VisualFStarCore.fsproj">
+      <Name>VisualFStarCore</Name>
+      <Project>{d15fb8f5-a949-4c05-866b-ece1ec8125c5}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
 </Project>
