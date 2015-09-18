@@ -1,0 +1,23 @@
+type project
+owners
+    YaccConstructor
+authors 
+    YaccConstructor
+projectUrl
+    http://github.com/YaccConstructor/VisualFStar
+iconUrl
+    https://raw.githubusercontent.com/YaccConstructor/VisualFStar/master/docs/files/img/logo.png
+licenseUrl
+    http://github.com/YaccConstructor/VisualFStar/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    FStar VisualStudio IDE Editor
+summary
+    Support for F* in Visual Studio IDE
+description
+    Support for F* in Visual Studio IDE
+
+
