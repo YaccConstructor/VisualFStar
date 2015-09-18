@@ -9,8 +9,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>VisualFStar.Tests</RootNamespace>
     <AssemblyName>VisualFStar.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFSharpCoreVersion>4.3.0.0</TargetFSharpCoreVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <Name>VisualFStar.Tests</Name>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
@@ -79,17 +79,17 @@
   -->
   <Import Project="..\..\.paket\paket.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\src\VisualFStarCore\VisualFStarCore.fsproj">
+      <Name>VisualFStarCore</Name>
+      <Project>{d15fb8f5-a949-4c05-866b-ece1ec8125c5}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
       <Paket>True</Paket>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\VisualFStar\VisualFStarCore.fsproj">
-      <Name>VisualFStarCore</Name>
-      <Project>{d15fb8f5-a949-4c05-866b-ece1ec8125c5}</Project>
-      <Private>True</Private>
-    </ProjectReference>
   </ItemGroup>
 </Project>

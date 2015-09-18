@@ -61,6 +61,7 @@ internal class TestScanner : IScanner
 {
     private IVsTextBuffer m_buffer;
     string m_source;
+    private IEnumerator<Tuple<TokenType, TokenColor, bool>> tokens;
 
     public TestScanner(IVsTextBuffer buffer)
     {
@@ -72,11 +73,18 @@ internal class TestScanner : IScanner
         tokenInfo.Type = TokenType.Unknown;
         tokenInfo.Color = TokenColor.Text;
         return true;
+
+        //var r = tokens.Current;
+        //tokens.MoveNext();
+        //tokenInfo.Type = r.Item1;
+        //tokenInfo.Color = r.Item2;
+        //return r.Item3;
     }
 
     void IScanner.SetSource(string source, int offset)
     {
         m_source = source.Substring(offset);
+        //tokens = VisualFStar.Core.tokenize("", source).GetEnumerator();        
     }
 }
 

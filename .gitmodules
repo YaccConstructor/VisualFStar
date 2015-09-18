@@ -1,0 +1,4 @@
+[submodule "FStar"]
+	path = FStar
+	url = https://github.com/YaccConstructor/FStar.git
+	branch = VisualFStar
