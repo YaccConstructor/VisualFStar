@@ -17,7 +17,20 @@ namespace VisualFStar
     public class FStarLanguageService : LanguageService
     {
         private LanguagePreferences m_preferences;
-        private TestScanner m_scanner;
+        private Core.FStarScanner  m_scanner;
+        private ColorableItem[] m_colorableItems;
+
+        public FStarLanguageService() : base()
+        {
+            m_colorableItems = new ColorableItem[] {
+                new ColorableItem("TestLanguage – Keyword",
+                                  "Keyword",
+                                  COLORINDEX.CI_MAROON,
+                                  COLORINDEX.CI_SYSPLAINTEXT_BK,
+                                  System.Drawing.Color.FromArgb(192,32,32),
+                                  System.Drawing.Color.Empty,
+                                  FONTFLAGS.FF_BOLD)};
+        }
 
         public override LanguagePreferences GetLanguagePreferences()
         {
@@ -35,7 +48,7 @@ namespace VisualFStar
         {
             if (m_scanner == null)
             {
-                m_scanner = new TestScanner(buffer);
+                m_scanner = new Core.FStarScanner(buffer);
             }
             return m_scanner;
         }
@@ -54,38 +67,6 @@ namespace VisualFStar
         {
             return "*.fst";
         }
-    }
-}
-
-internal class TestScanner : IScanner
-{
-    private IVsTextBuffer m_buffer;
-    string m_source;
-    private IEnumerator<Tuple<TokenType, TokenColor, bool>> tokens;
-
-    public TestScanner(IVsTextBuffer buffer)
-    {
-        m_buffer = buffer;
-       // VisualFStar.Core.tokenize(@"C:\gsv\projects\YC\FStar\VisualFStar\paket.lock", "");
-    }
-
-    bool IScanner.ScanTokenAndProvideInfoAboutIt(TokenInfo tokenInfo, ref int state)
-    {
-        //tokenInfo.Type = TokenType.Unknown;
-        //tokenInfo.Color = TokenColor.Text;
-        //return true;
-
-        tokens.MoveNext();
-        var r = tokens.Current;        
-        tokenInfo.Type = r.Item1;
-        tokenInfo.Color = r.Item2;
-        return r.Item3;
-    }
-
-    void IScanner.SetSource(string source, int offset)
-    {        
-        m_source = source.Substring(offset);
-        tokens = VisualFStar.Core.tokenize(@"C:\gsv\projects\YC\FStar\VisualFStar\paket.lock", m_source).GetEnumerator();
     }
 }
 
