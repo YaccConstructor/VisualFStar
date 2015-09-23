@@ -10,6 +10,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.OLE.Interop;
 using System.Runtime.InteropServices;
 using System.ComponentModel.Design;
+using VisualFStar.Core;
 
 namespace VisualFStar
 {
@@ -23,13 +24,34 @@ namespace VisualFStar
         public FStarLanguageService() : base()
         {
             m_colorableItems = new ColorableItem[] {
-                new ColorableItem("TestLanguage – Keyword",
+                new ColorableItem("FStarLanguage – Keyword",
                                   "Keyword",
                                   COLORINDEX.CI_MAROON,
                                   COLORINDEX.CI_SYSPLAINTEXT_BK,
                                   System.Drawing.Color.FromArgb(192,32,32),
                                   System.Drawing.Color.Empty,
-                                  FONTFLAGS.FF_BOLD)};
+                                  FONTFLAGS.FF_BOLD),
+                new ColorableItem("FStarLanguage – Text",
+                                  "Text",
+                                  COLORINDEX.CI_SYSPLAINTEXT_FG,
+                                  COLORINDEX.CI_SYSPLAINTEXT_BK,
+                                  System.Drawing.Color.Empty,
+                                  System.Drawing.Color.Empty,
+                                  FONTFLAGS.FF_DEFAULT),
+                new ColorableItem("FStarLanguage – Keyword",
+                                  "Keyword",
+                                  COLORINDEX.CI_MAROON,
+                                  COLORINDEX.CI_SYSPLAINTEXT_BK,
+                                  System.Drawing.Color.FromArgb(192, 32, 32),
+                                  System.Drawing.Color.Empty,
+                                  FONTFLAGS.FF_BOLD),
+                new ColorableItem("FStarLanguage – Comment",
+                                  "Comment",
+                                  COLORINDEX.CI_DARKGREEN,
+                                  COLORINDEX.CI_LIGHTGRAY,
+                                  System.Drawing.Color.FromArgb(32, 128, 32),
+                                  System.Drawing.Color.Empty,
+                                  FONTFLAGS.FF_DEFAULT)};
         }
 
         public override LanguagePreferences GetLanguagePreferences()
