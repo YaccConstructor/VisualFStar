@@ -22,11 +22,18 @@ type FStarScanner(buffer: IVsTextBuffer) =
         let data =
             seq{while not lexbuf.IsPastEndOfStream do 
                     match tokenizer lexbuf with
-                    | LET x ->  yield Some (TokenType.Keyword, TokenColor.Keyword)
-                    | _     -> yield Some (TokenType.Unknown, TokenColor.Text) 
+                    | LET _    
+                    | IF
+                    | MATCH
+                    | WITH
+                    | IN       -> yield Some (TokenType.Keyword, TokenColor.Keyword, lexbuf)
+                    | INT _    -> yield Some (TokenType.Literal, TokenColor.Number, lexbuf) 
+                    | CHAR _
+                    | STRING _ -> yield Some (TokenType.Literal, TokenColor.String, lexbuf)
+                    | COMMENT _ -> yield Some (TokenType.Comment, TokenColor.Comment, lexbuf)
+                    | _        -> yield Some (TokenType.Unknown, TokenColor.Text, lexbuf) 
                 yield None}
-        //let arr = data |> List.ofSeq
-        //arr  |> printfn "%A"
+                        
         let enumerator = data.GetEnumerator()
         fun () ->
             let t = enumerator.MoveNext() 
@@ -35,9 +42,11 @@ type FStarScanner(buffer: IVsTextBuffer) =
     interface IScanner with
         member this.ScanTokenAndProvideInfoAboutIt(tokenInfo, state) =
             match getNextToken() with
-            | Some (typ, color) -> 
+            | Some (typ, color, lexbuf:Microsoft.FSharp.Text.Lexing.LexBuffer<char>) -> 
                 tokenInfo.Color <- color
                 tokenInfo.Type <- typ
+                tokenInfo.StartIndex <- lexbuf.StartPos.AbsoluteOffset
+                tokenInfo.EndIndex <- lexbuf.EndPos.AbsoluteOffset
                 true
             | None -> false
 

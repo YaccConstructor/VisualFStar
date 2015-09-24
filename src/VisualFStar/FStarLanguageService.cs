@@ -11,7 +11,6 @@ using Microsoft.VisualStudio.OLE.Interop;
 using System.Runtime.InteropServices;
 using System.ComponentModel.Design;
 
-
 namespace VisualFStar
 {
     
@@ -23,29 +22,23 @@ namespace VisualFStar
 
         public FStarLanguageService() : base()
         {
-            m_colorableItems = new ColorableItem[] {
-                new ColorableItem("FStarLanguage – Keyword",
-                                  "Keyword",
-                                  COLORINDEX.CI_MAROON,
-                                  COLORINDEX.CI_SYSPLAINTEXT_BK,
-                                  System.Drawing.Color.FromArgb(192,32,32),
-                                  System.Drawing.Color.Empty,
-                                  FONTFLAGS.FF_BOLD),
-                new ColorableItem("FStarLanguage – Text",
-                                  "Text",
-                                  COLORINDEX.CI_SYSPLAINTEXT_FG,
-                                  COLORINDEX.CI_SYSPLAINTEXT_BK,
-                                  System.Drawing.Color.Empty,
-                                  System.Drawing.Color.Empty,
-                                  FONTFLAGS.FF_DEFAULT),
-                new ColorableItem("FStarLanguage – Comment",
-                                  "Comment",
-                                  COLORINDEX.CI_DARKGREEN,
-                                  COLORINDEX.CI_LIGHTGRAY,
-                                  System.Drawing.Color.FromArgb(32, 128, 32),
-                                  System.Drawing.Color.Empty,
-                                  FONTFLAGS.FF_DEFAULT)};
-        }
+            //m_colorableItems = new ColorableItem[] {
+            //    new ColorableItem("TestLanguage – sa",
+            //                      "asd",
+            //                      COLORINDEX.CI_MAROON,
+            //                      COLORINDEX.CI_SYSPLAINTEXT_BK,
+            //                      System.Drawing.Color.FromArgb(192,32,32),
+            //                      System.Drawing.Color.Empty,
+            //                      FONTFLAGS.FF_BOLD),
+            //new ColorableItem("TestLanguage – Keyword",
+            //                      "Keyword",
+            //                      COLORINDEX.CI_MAROON,
+            //                      COLORINDEX.CI_SYSPLAINTEXT_BK,
+            //                      System.Drawing.Color.FromArgb(192, 32, 32),
+            //                      System.Drawing.Color.DeepSkyBlue,
+            //                      FONTFLAGS.FF_BOLD)};
+
+}
 
         public override LanguagePreferences GetLanguagePreferences()
         {
@@ -71,6 +64,7 @@ namespace VisualFStar
         public override AuthoringScope ParseSource(ParseRequest req)
         {
             return new TestAuthoringScope();
+            //req.Sink.AddError
         }
 
         public override string Name

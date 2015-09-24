@@ -42,8 +42,8 @@ namespace VisualFStar
         AutoOutlining = true,
         EnableCommenting = true,
         MatchBraces = true,
-        RequestStockColors = false,
-        ShowMatchingBrace = true)]
+        ShowMatchingBrace = true,
+        RequestStockColors = false)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
     [Guid(FStarVSPackage.PackageGuidString)]
