@@ -22,11 +22,16 @@ type FStarScanner(buffer: IVsTextBuffer) =
         let data =
             seq{while not lexbuf.IsPastEndOfStream do 
                     match tokenizer lexbuf with
-                    | LET x -> yield Some (TokenType.Keyword, TokenColor.Keyword, lexbuf)
-                    | IN    -> yield Some (TokenType.Keyword, TokenColor.Keyword, lexbuf)
-                    | INT _ -> yield Some (TokenType.Literal, TokenColor.Number, lexbuf) 
-                    | STRING _ -> yield Some (TokenType.Literal, TokenColor.String, lexbuf) 
-                    | _     -> yield Some (TokenType.Unknown, TokenColor.Text, lexbuf) 
+                    | LET _    
+                    | IF
+                    | MATCH
+                    | WITH
+                    | IN       -> yield Some (TokenType.Keyword, TokenColor.Keyword, lexbuf)
+                    | INT _    -> yield Some (TokenType.Literal, TokenColor.Number, lexbuf) 
+                    | CHAR _
+                    | STRING _ -> yield Some (TokenType.Literal, TokenColor.String, lexbuf)
+                    | COMMENT _ -> yield Some (TokenType.Comment, TokenColor.Comment, lexbuf)
+                    | _        -> yield Some (TokenType.Unknown, TokenColor.Text, lexbuf) 
                 yield None}
                         
         let enumerator = data.GetEnumerator()
