@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.OLE.Interop;
 using System.Runtime.InteropServices;
 using System.ComponentModel.Design;
-using VisualFStar.Core;
+
 
 namespace VisualFStar
 {
@@ -38,13 +38,6 @@ namespace VisualFStar
                                   System.Drawing.Color.Empty,
                                   System.Drawing.Color.Empty,
                                   FONTFLAGS.FF_DEFAULT),
-                new ColorableItem("FStarLanguage – Keyword",
-                                  "Keyword",
-                                  COLORINDEX.CI_MAROON,
-                                  COLORINDEX.CI_SYSPLAINTEXT_BK,
-                                  System.Drawing.Color.FromArgb(192, 32, 32),
-                                  System.Drawing.Color.Empty,
-                                  FONTFLAGS.FF_BOLD),
                 new ColorableItem("FStarLanguage – Comment",
                                   "Comment",
                                   COLORINDEX.CI_DARKGREEN,
