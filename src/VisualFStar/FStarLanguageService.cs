@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.OLE.Interop;
 using System.Runtime.InteropServices;
 using System.ComponentModel.Design;
 
+
 namespace VisualFStar
 {
     
@@ -38,6 +39,12 @@ namespace VisualFStar
             //                      System.Drawing.Color.DeepSkyBlue,
             //                      FONTFLAGS.FF_BOLD)};
 
+                                  "Comment",
+                                  COLORINDEX.CI_DARKGREEN,
+                                  COLORINDEX.CI_LIGHTGRAY,
+                                  System.Drawing.Color.FromArgb(32, 128, 32),
+                                  System.Drawing.Color.Empty,
+                                  FONTFLAGS.FF_DEFAULT)};
 }
 
         public override LanguagePreferences GetLanguagePreferences()
