@@ -22,15 +22,23 @@ namespace VisualFStar
 
         public FStarLanguageService() : base()
         {
-            m_colorableItems = new ColorableItem[] {
-                new ColorableItem("TestLanguage – Keyword",
-                                  "Keyword",
-                                  COLORINDEX.CI_MAROON,
-                                  COLORINDEX.CI_SYSPLAINTEXT_BK,
-                                  System.Drawing.Color.FromArgb(192,32,32),
-                                  System.Drawing.Color.Empty,
-                                  FONTFLAGS.FF_BOLD)};
-        }
+            //m_colorableItems = new ColorableItem[] {
+            //    new ColorableItem("TestLanguage – sa",
+            //                      "asd",
+            //                      COLORINDEX.CI_MAROON,
+            //                      COLORINDEX.CI_SYSPLAINTEXT_BK,
+            //                      System.Drawing.Color.FromArgb(192,32,32),
+            //                      System.Drawing.Color.Empty,
+            //                      FONTFLAGS.FF_BOLD),
+            //new ColorableItem("TestLanguage – Keyword",
+            //                      "Keyword",
+            //                      COLORINDEX.CI_MAROON,
+            //                      COLORINDEX.CI_SYSPLAINTEXT_BK,
+            //                      System.Drawing.Color.FromArgb(192, 32, 32),
+            //                      System.Drawing.Color.DeepSkyBlue,
+            //                      FONTFLAGS.FF_BOLD)};
+
+}
 
         public override LanguagePreferences GetLanguagePreferences()
         {
