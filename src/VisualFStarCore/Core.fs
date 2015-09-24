@@ -43,4 +43,4 @@ type FStarScanner(buffer: IVsTextBuffer) =
 
         member this.SetSource(source, offset) =    
             _source <- source.Substring(offset)
-            getNextToken <- tokenize @"C:\gsv\projects\YC\FStar\VisualFStar\paket.lock" _source
+            getNextToken <- tokenize @"C:\Users\User\VisualFStar\paket.lock" _source
