@@ -11,11 +11,14 @@ open FStar.Parser.ParseIt
 open FStar.Util
 
 
-type FStarScanner(buffer: IVsTextBuffer) =    
+type FStarScanner(buffer: IVsTextBuffer) as this =    
+    
+    let mutable bufferedC = ""
+    let mutable prevState = 0
     
     let mutable _buffer = buffer
     let mutable _source = ""
-    let mutable getNextToken = fun _ -> false
+    let mutable getNextToken = fun _ -> fun _ -> false
 
     let tokenize (fileName:string) str =  
         let lexbuf = Microsoft.FSharp.Text.Lexing.LexBuffer<char>.FromString str
@@ -28,16 +31,21 @@ type FStarScanner(buffer: IVsTextBuffer) =
                 yield None}
                         
         let enumerator = data.GetEnumerator()
-        fun (tokenInfo:TokenInfo) ->
-            let t = enumerator.MoveNext() 
-            let token = 
-                if t 
-                then 
-                    try enumerator.Current with
-                    | FStar.LexFStar.BlockCommentUnclosed ->
-                        None
-                    | e -> None                    
-                else None
+        fun (tokenInfo:TokenInfo) state ->
+            let token =
+                try
+                    let t = enumerator.MoveNext() 
+                    prevState <- 0
+                    if t 
+                    then enumerator.Current
+                    else None
+                with
+                | FStar.LexFStar.BlockCommentUnclosed ->
+                    //bufferedC <- bufferedC + str
+                    //prevState <- 10
+                    //(this :>IScanner). // .SetSource(,0)
+                    None
+                | e -> None                                    
             tokenInfo.Type <- TokenType.Text
             tokenInfo.Color <- TokenColor.Text
             tokenInfo.Trigger <- TokenTriggers.None
@@ -96,10 +104,10 @@ type FStarScanner(buffer: IVsTextBuffer) =
             | None -> false
 
     interface IScanner with
-        member this.ScanTokenAndProvideInfoAboutIt(tokenInfo, state) =
-            getNextToken tokenInfo            
+        member this.ScanTokenAndProvideInfoAboutIt(tokenInfo, state) =            
+            getNextToken tokenInfo state           
 
-        member this.SetSource(source, offset) =    
+        member this.SetSource(source, offset) = 
             _source <- source.Substring(offset)
             getNextToken <- tokenize @"C:\Users\User\VisualFStar\paket.lock" _source
 
