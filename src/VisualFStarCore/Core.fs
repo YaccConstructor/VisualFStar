@@ -34,7 +34,9 @@ type FStarScanner(buffer: IVsTextBuffer) =
                 if t 
                 then 
                     try enumerator.Current with
-                    | e -> None
+                    | FStar.LexFStar.BlockCommentUnclosed ->
+                        None
+                    | e -> None                    
                 else None
             tokenInfo.Type <- TokenType.Text
             tokenInfo.Color <- TokenColor.Text
@@ -107,8 +109,8 @@ type ParseResult =
 
 type FStarParser () =
     let parse (req:ParseRequest) =         
-        match parse (Inl req.FileName) with
-        | Inl (Inl ast) ->          
+        match parse (Inr req.Text) with
+        | Inl (Inl ast) ->                                
           //Desugar.desugar_file env ast
           Success 1
 

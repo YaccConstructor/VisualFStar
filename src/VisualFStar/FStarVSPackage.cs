@@ -38,14 +38,16 @@ namespace VisualFStar
     /// </remarks>
     [Microsoft.VisualStudio.Shell.ProvideService(typeof(FStarLanguageService))]
     [Microsoft.VisualStudio.Shell.ProvideLanguageExtension(typeof(FStarLanguageService), ".fst")]
-    [Microsoft.VisualStudio.Shell.ProvideLanguageService(typeof(FStarLanguageService), "FStar Language", 0,
+    [Microsoft.VisualStudio.Shell.ProvideLanguageService(typeof(FStarLanguageService), "FStar", 0,
         AutoOutlining = true,
         EnableCommenting = true,
         MatchBraces = true,        
         MatchBracesAtCaret = true,
         ShowMatchingBrace = true,
-        CodeSense = true,
+        EnableAsyncCompletion = true,
+        CodeSense = true,        
         CodeSenseDelay = 1000,
+        QuickInfo = true,
         RequestStockColors = false)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About

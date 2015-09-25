@@ -19,6 +19,13 @@ namespace VisualFStar
         {
 
         }
+
+        public override void OnIdle(bool isPeriodic)
+        {
+            this.BeginParse();
+            base.OnIdle(isPeriodic);
+        }
+        
         public override CommentInfo GetCommentFormat()
         {
             CommentInfo info = new CommentInfo();
@@ -70,6 +77,10 @@ namespace VisualFStar
         public override AuthoringScope ParseSource(ParseRequest req)
         {
             Core.FStarParser parser = new Core.FStarParser();
+            if (ParseReason.Check == req.Reason)
+            {
+                Console.WriteLine("!!!!");
+            }
             parser.Parse(req);                        
             return new TestAuthoringScope();
         }
@@ -90,8 +101,13 @@ internal class TestAuthoringScope : AuthoringScope
 {
     public override string GetDataTipText(int line, int col, out TextSpan span)
     {
-        span = new TextSpan();        
-        return null;
+        var s = new TextSpan();
+        s.iStartIndex = col;
+        s.iStartLine = line;
+        s.iEndIndex = col+1;
+        s.iEndLine = line;
+        span = s; 
+        return "uaaaa!!!";
     }
 
     public override Declarations GetDeclarations(IVsTextView view,
