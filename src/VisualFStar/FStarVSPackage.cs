@@ -41,8 +41,11 @@ namespace VisualFStar
     [Microsoft.VisualStudio.Shell.ProvideLanguageService(typeof(FStarLanguageService), "FStar Language", 0,
         AutoOutlining = true,
         EnableCommenting = true,
-        MatchBraces = true,
+        MatchBraces = true,        
+        MatchBracesAtCaret = true,
         ShowMatchingBrace = true,
+        CodeSense = true,
+        CodeSenseDelay = 1000,
         RequestStockColors = false)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
@@ -72,8 +75,7 @@ namespace VisualFStar
         /// Initialization of the package; this method is called right after the package is sited, so this is the place
         /// where you can put all the initialization code that rely on services provided by VisualStudio.
         /// </summary>
-        private uint m_componentID;
-
+        private uint m_componentID;        
 
         protected override void Initialize()
         {
@@ -196,5 +198,5 @@ namespace VisualFStar
 
         #endregion
         #endregion
-    }
+    }   
 }

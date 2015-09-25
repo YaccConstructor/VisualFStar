@@ -13,7 +13,23 @@ using System.ComponentModel.Design;
 
 namespace VisualFStar
 {
-    
+    class FStarSource : Source
+    {
+        public FStarSource(LanguageService service, IVsTextLines textLines, Colorizer colorizer) : base(service, textLines, colorizer)
+        {
+
+        }
+        public override CommentInfo GetCommentFormat()
+        {
+            CommentInfo info = new CommentInfo();
+            info.LineStart = "//";
+            info.BlockStart = "(*";
+            info.BlockEnd = "*)";
+            info.UseLineComments = true;
+            return info;
+        }
+    }
+
     public class FStarLanguageService : LanguageService
     {
         private LanguagePreferences m_preferences;
@@ -22,23 +38,13 @@ namespace VisualFStar
 
         public FStarLanguageService() : base()
         {
-            //m_colorableItems = new ColorableItem[] {
-            //    new ColorableItem("TestLanguage – sa",
-            //                      "asd",
-            //                      COLORINDEX.CI_MAROON,
-            //                      COLORINDEX.CI_SYSPLAINTEXT_BK,
-            //                      System.Drawing.Color.FromArgb(192,32,32),
-            //                      System.Drawing.Color.Empty,
-            //                      FONTFLAGS.FF_BOLD),
-            //new ColorableItem("TestLanguage – Keyword",
-            //                      "Keyword",
-            //                      COLORINDEX.CI_MAROON,
-            //                      COLORINDEX.CI_SYSPLAINTEXT_BK,
-            //                      System.Drawing.Color.FromArgb(192, 32, 32),
-            //                      System.Drawing.Color.DeepSkyBlue,
-            //                      FONTFLAGS.FF_BOLD)};
+            
+        }
 
-}
+        public override Source CreateSource(IVsTextLines buffer)
+        {
+            return new FStarSource(this,buffer,this.GetColorizer(buffer));
+        }
 
         public override LanguagePreferences GetLanguagePreferences()
         {
@@ -48,7 +54,7 @@ namespace VisualFStar
                                                         typeof(FStarLanguageService).GUID,
                                                         this.Name);
                 m_preferences.Init();
-            }
+            }            
             return m_preferences;
         }
         
@@ -63,8 +69,9 @@ namespace VisualFStar
 
         public override AuthoringScope ParseSource(ParseRequest req)
         {
+            Core.FStarParser parser = new Core.FStarParser();
+            parser.Parse(req);                        
             return new TestAuthoringScope();
-            //req.Sink.AddError
         }
 
         public override string Name
@@ -83,7 +90,7 @@ internal class TestAuthoringScope : AuthoringScope
 {
     public override string GetDataTipText(int line, int col, out TextSpan span)
     {
-        span = new TextSpan();
+        span = new TextSpan();        
         return null;
     }
 
