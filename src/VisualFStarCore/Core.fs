@@ -30,7 +30,12 @@ type FStarScanner(buffer: IVsTextBuffer) =
         let enumerator = data.GetEnumerator()
         fun (tokenInfo:TokenInfo) ->
             let t = enumerator.MoveNext() 
-            let token = if t then enumerator.Current else None
+            let token = 
+                if t 
+                then 
+                    try enumerator.Current with
+                    | e -> None
+                else None
             tokenInfo.Type <- TokenType.Text
             tokenInfo.Color <- TokenColor.Text
             tokenInfo.Trigger <- TokenTriggers.None
@@ -62,7 +67,7 @@ type FStarScanner(buffer: IVsTextBuffer) =
                 | MATCH
                 | WITH
                 | IN       -> 
-                    tokenInfo.Type <- TokenType.Keyword
+                    tokenInfo.Type <- TokenType.Keyword                    
                     tokenInfo.Color <- TokenColor.Keyword                    
                     true                
                 | CHAR _
@@ -70,7 +75,8 @@ type FStarScanner(buffer: IVsTextBuffer) =
                     tokenInfo.Type <- TokenType.Literal
                     tokenInfo.Color <- TokenColor.String                    
                     true
-                | COMMENT _ ->
+                | COMMENT 
+                | LINE_COMMENT ->
                     tokenInfo.Type <- TokenType.Comment
                     tokenInfo.Color <- TokenColor.Comment                    
                     true
