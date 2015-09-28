@@ -1,0 +1,21 @@
+﻿<VSTemplate Version="2.0.0" Type="Project"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>FStarProject Application</Name>
+    <Description>
+      A project for creating a FStarProject application
+    </Description>
+    <Icon>FStarProject.ico</Icon>
+    <ProjectType>FStarProject</ProjectType>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="FStarProject.fstarproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">
+        Program.fst
+      </ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="false">
+        AssemblyInfo.cs
+      </ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
