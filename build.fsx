@@ -45,6 +45,7 @@ let tags = "FStar VisualStudio IDE Editor"
 
 // File system information 
 let solutionFile  = "VisualFStar.sln"
+let fStarSolutionFile = "FStar/src/VS/FStar.sln"
 
 // Pattern specifying assemblies to be tested using NUnit
 let testAssemblies = "tests/**/bin/Release/*Tests*.dll"
@@ -122,6 +123,8 @@ Target "CleanDocs" (fun _ ->
     CleanDirs ["docs/output"]
 )
 
+
+
 // --------------------------------------------------------------------------------------
 // Build library & test project
 
@@ -130,6 +133,13 @@ Target "Build" (fun _ ->
     |> MSBuildRelease "" "Rebuild"
     |> ignore
 )
+
+Target "BuildFStar" (fun _ ->
+    !! fStarSolutionFile
+    |> MSBuildRelease "" "Rebuild"
+    |> ignore
+)
+
 
 // --------------------------------------------------------------------------------------
 // Run the unit tests using test runner
@@ -321,13 +331,14 @@ Target "All" DoNothing
 
 "Clean"
   ==> "AssemblyInfo"
+  ==> "BuildFStar"
   ==> "Build"
   ==> "CopyBinaries"
   ==> "RunTests"
-  ==> "GenerateReferenceDocs"
-  ==> "GenerateDocs"
+//  ==> "GenerateReferenceDocs"
+//  ==> "GenerateDocs"
   ==> "All"
-  =?> ("ReleaseDocs",isLocalBuild)
+//  =?> ("ReleaseDocs",isLocalBuild)
 
 "All" 
 #if MONO

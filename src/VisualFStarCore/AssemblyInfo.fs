@@ -1,8 +1,7 @@
 ﻿namespace System
 open System.Reflection
 
-//[<assembly: AssemblyKeyFileAttribute("VisualFStarCore.snk")>]
-[<assembly: AssemblyTitleAttribute("VisualFStar")>]
+[<assembly: AssemblyTitleAttribute("VisualFStarCore")>]
 [<assembly: AssemblyProductAttribute("VisualFStar")>]
 [<assembly: AssemblyDescriptionAttribute("Support for F* in Visual Studio IDE")>]
 [<assembly: AssemblyVersionAttribute("1.0")>]
