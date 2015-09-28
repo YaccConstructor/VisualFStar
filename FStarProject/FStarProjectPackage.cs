@@ -15,6 +15,7 @@ using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.Win32;
+using Microsoft.VisualStudio.Project;
 
 namespace FStarProject
 {
@@ -39,11 +40,12 @@ namespace FStarProject
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
    // [Guid(FStarProjectPackage.PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
-    [ProvideProjectFactory(typeof(FStarProject.Templates.Projects.FStarProject.FStarProjectFactory), "FStar Project",
+    [ProvideProjectFactory(typeof(FStarProject.Templates.Projects.FStarProject.FStarProjectFactory), null,
     "FStar Project Files (*.fstarproj);*.fstarproj", "fstarproj", "fstarproj",
-    @"Templates\Projects\FStarProject", LanguageVsTemplate = "FStarProject")]
+    ".\\NullPath", LanguageVsTemplate = "FStarProject")]
     [Guid(FStarProjectPackageGuids.guidFStarProjectPkgString)]
-    public sealed class FStarProjectPackage : Package
+    [ProvideObject(typeof(GeneralPropertyPage))]
+    public sealed class FStarProjectPackage : ProjectPackage
     {
         /// <summary>
         /// FStarProjectPackage GUID string.
@@ -70,6 +72,12 @@ namespace FStarProject
         protected override void Initialize()
         {
             base.Initialize();
+            this.RegisterProjectFactory(new FStarProject.Templates.Projects.FStarProject.FStarProjectFactory(this));
+        }
+
+        public override string ProductUserContext
+        {
+            get { return ""; }
         }
 
         #endregion

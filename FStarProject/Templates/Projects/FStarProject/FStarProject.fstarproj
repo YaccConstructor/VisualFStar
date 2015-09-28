@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid></ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MyRootNamespace</RootNamespace>
+    <RootNamespace>$safeprojectname$</RootNamespace>
     <AssemblyName>MyAssemblyName</AssemblyName>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
@@ -27,7 +27,7 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Program.cs">
+    <Compile Include="Program.fst">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
