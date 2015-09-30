@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{6E5D9592-F0E4-42E2-9A88-395AB7C3353F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\paket.dependencies = ..\..\..\..\..\..\paket.dependencies
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{294C184F-40FD-405B-8300-68B8832EC0E7}"
 	ProjectSection(SolutionItems) = preProject
 		CustomProject.UnitTests.vsmdi = CustomProject.UnitTests.vsmdi

@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{C40A60B0-9D58-4D80-AE73-D28EB5FB99EA}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\paket.dependencies = ..\..\..\paket.dependencies
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85F87CAA-B258-45D8-8C08-2FA0520D946F}"
 	ProjectSection(SolutionItems) = preProject
 		Microsoft.VisualStudio.Project.IntegrationTests.testrunconfig = Microsoft.VisualStudio.Project.IntegrationTests.testrunconfig

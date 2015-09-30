@@ -136,6 +136,7 @@ type FStarParser () =
             span.iEndLine  <- FStar.Range.end_of_range r |> FStar.Range.line_of_pos
 
             req.Sink.AddError(req.FileName,msg,span,Severity.Error)
+            Error(r, msg)
 
     member this.Parse (req:ParseRequest) =        
         parse req

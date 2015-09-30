@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.20827.3
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{E2432550-DC88-4A3A-B1F0-64D7DFE0191F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\paket.dependencies = ..\..\..\..\..\..\paket.dependencies
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomProject", "Src\CustomProject.csproj", "{F4ADEBDB-CD20-4532-B4E3-FE7424F5369C}"
 EndProject
 Global
