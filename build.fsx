@@ -335,7 +335,7 @@ Target "All" DoNothing
 
 "Clean"
   ==> "AssemblyInfo"
-  ==> "BuildFStar"
+//  ==> "BuildFStar"
   ==> "Build"
   ==> "CopyBinaries"
   ==> "RunTests"
