@@ -45,6 +45,7 @@ let tags = "FStar VisualStudio IDE Editor"
 
 // File system information 
 let solutionFile  = "VisualFStar.sln"
+let fStarSolutionFile = "FStar/src/VS/FStar.sln"
 
 // Pattern specifying assemblies to be tested using NUnit
 let testAssemblies = "tests/**/bin/Release/*Tests*.dll"
@@ -68,11 +69,13 @@ let gitRaw = environVarOrDefault "gitRaw" "https://raw.github.com/YaccConstructo
 let release = LoadReleaseNotes "RELEASE_NOTES.md"
 
 // Helper active pattern for project types
-let (|Fsproj|Csproj|Vbproj|) (projFileName:string) = 
+let (|Fsproj|Csproj|Vbproj|Tplproj|) (projFileName:string) = 
     match projFileName with
     | f when f.EndsWith("fsproj") -> Fsproj
     | f when f.EndsWith("csproj") -> Csproj
     | f when f.EndsWith("vbproj") -> Vbproj
+    | f when f.EndsWith("myproj") 
+          || f.EndsWith("fstproj") -> Tplproj
     | _                           -> failwith (sprintf "Project file %s not supported. Unknown project type." projFileName)
 
 // Generate assembly info files with the right version & up-to-date information
@@ -99,6 +102,7 @@ Target "AssemblyInfo" (fun _ ->
         | Fsproj -> CreateFSharpAssemblyInfo (folderName @@ "AssemblyInfo.fs") attributes
         | Csproj -> CreateCSharpAssemblyInfo ((folderName @@ "Properties") @@ "AssemblyInfo.cs") attributes
         | Vbproj -> CreateVisualBasicAssemblyInfo ((folderName @@ "My Project") @@ "AssemblyInfo.vb") attributes
+        | Tplproj -> ()
         )
 )
 
@@ -107,6 +111,7 @@ Target "AssemblyInfo" (fun _ ->
 // src folder to support multiple project outputs
 Target "CopyBinaries" (fun _ ->
     !! "src/**/*.??proj"
+    |>  Seq.filter (fun f -> not <| f.Contains "MPFProj")//f.EndsWith("myproj") || f.EndsWith("fstproj"))
     |>  Seq.map (fun f -> ((System.IO.Path.GetDirectoryName f) @@ "bin/Release", "bin" @@ (System.IO.Path.GetFileNameWithoutExtension f)))
     |>  Seq.iter (fun (fromDir, toDir) -> CopyDir toDir fromDir (fun _ -> true))
 )
@@ -122,6 +127,8 @@ Target "CleanDocs" (fun _ ->
     CleanDirs ["docs/output"]
 )
 
+
+
 // --------------------------------------------------------------------------------------
 // Build library & test project
 
@@ -130,6 +137,13 @@ Target "Build" (fun _ ->
     |> MSBuildRelease "" "Rebuild"
     |> ignore
 )
+
+Target "BuildFStar" (fun _ ->
+    !! fStarSolutionFile
+    |> MSBuildRelease "" "Rebuild"
+    |> ignore
+)
+
 
 // --------------------------------------------------------------------------------------
 // Run the unit tests using test runner
@@ -321,13 +335,14 @@ Target "All" DoNothing
 
 "Clean"
   ==> "AssemblyInfo"
+//  ==> "BuildFStar"
   ==> "Build"
   ==> "CopyBinaries"
   ==> "RunTests"
-  ==> "GenerateReferenceDocs"
-  ==> "GenerateDocs"
+//  ==> "GenerateReferenceDocs"
+//  ==> "GenerateDocs"
   ==> "All"
-  =?> ("ReleaseDocs",isLocalBuild)
+//  =?> ("ReleaseDocs",isLocalBuild)
 
 "All" 
 #if MONO

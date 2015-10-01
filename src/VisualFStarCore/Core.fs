@@ -109,7 +109,7 @@ type FStarScanner(buffer: IVsTextBuffer) as this =
 
         member this.SetSource(source, offset) = 
             _source <- source.Substring(offset)
-            getNextToken <- tokenize @"C:\Users\User\VisualFStar\paket.lock" _source
+            getNextToken <- tokenize @"" _source
 
 type ParseResult =
     | Success of int
@@ -136,8 +136,7 @@ type FStarParser () =
             span.iEndLine  <- FStar.Range.end_of_range r |> FStar.Range.line_of_pos
 
             req.Sink.AddError(req.FileName,msg,span,Severity.Error)
-            //FStar.Range.
-            Error (r, msg)
+            Error(r, msg)
 
     member this.Parse (req:ParseRequest) =        
         parse req

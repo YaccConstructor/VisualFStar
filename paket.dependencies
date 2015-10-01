@@ -1,7 +1,33 @@
 source https://nuget.org/api/v2
 
 nuget FSharp.Formatting
-nuget FsLexYacc.Runtime
+nuget FsLexYacc 6.0.3 framework: >= net40
+nuget FsLexYacc.Runtime 6.1.0
+nuget Microsoft.VisualStudio.CoreUtility 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.Imaging 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.OLE.Interop 7.10.6070 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.14.0 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Immutable.10.0 10.0.30319 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Immutable.11.0 11.0.50727 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Immutable.12.0 12.0.21003 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Immutable.14.0 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Interop 7.10.6071 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Interop.10.0 10.0.30319 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Interop.11.0 11.0.61030 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Interop.12.0 12.0.30110 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Interop.8.0 8.0.50727 framework: >= net452
+nuget Microsoft.VisualStudio.Shell.Interop.9.0 9.0.30729 framework: >= net452
+nuget Microsoft.VisualStudio.Text.Data 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.Text.Logic 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.Text.UI 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.Text.UI.Wpf 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.TextManager.Interop 7.10.6070 framework: >= net452
+nuget Microsoft.VisualStudio.TextManager.Interop.8.0 8.0.50727 framework: >= net452
+nuget Microsoft.VisualStudio.Threading 14.0.50702 framework: >= net452
+nuget Microsoft.VisualStudio.Utilities 14.0.23107 framework: >= net452
+nuget Microsoft.VisualStudio.Validation 14.0.50702 framework: >= net452
+nuget Microsoft.VSSDK.BuildTools 14.0.23107 framework: >= net452
+nuget Nuget.CommandLine
 nuget NUnit 
 nuget NUnit.Runners
 nuget FAKE
