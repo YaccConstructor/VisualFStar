@@ -48,29 +48,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Program.fs" />
     <None Include="App.config" />
-    <Compile Include="FStarBuildTask.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FStar\src\absyn\absyn.fsproj">
+    <ProjectReference Include="..\..\FStar\src\absyn\absyn.fsproj">
       <Name>absyn</Name>
       <Project>{13e8984e-188d-447b-b7b7-9f7441050565}</Project>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\FStar\src\basic\basic.fsproj">
+    <ProjectReference Include="..\..\FStar\src\basic\basic.fsproj">
       <Name>basic</Name>
       <Project>{e8957dbd-58e7-4cf8-9192-e0a9cfb3867e}</Project>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\FStar\src\fstar\fstar.fsproj">
+    <ProjectReference Include="..\..\FStar\src\fstar\fstar.fsproj">
       <Name>fstar (FStar\fstar)</Name>
       <Project>{f95b3965-1a6a-4fbf-a079-e849e8ea3ff7}</Project>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\FStar\src\tc\tc.fsproj">
-      <Name>tc</Name>
-      <Project>{5bf4af3f-bec2-4cfd-94b7-11a38a031f4b}</Project>
+    <ProjectReference Include="..\..\FStar\src\tosmt\tosmt.fsproj">
+      <Name>tosmt</Name>
+      <Project>{670da3f6-7e41-4c1d-ab17-1f59e0317f52}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
