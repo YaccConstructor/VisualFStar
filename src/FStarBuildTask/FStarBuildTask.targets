@@ -1,0 +1,34 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="FStarBuild.FStar" AssemblyFile="FStarBuildTask.exe"/>
+  
+  <PropertyGroup>
+    <CompileDependsOn>CallFStarBuildTask;$(CompileDependsOn)</CompileDependsOn>
+  </PropertyGroup>
+
+  <Target
+		Name="CallFStarBuildTask"
+		Inputs="@(FStar);@(FStarBefore);@(FStarAfter)"
+		Condition="'@(FStar)'!=''"
+    Outputs="d">
+
+    <!-- Create the output directory -->
+    <!--MakeDir Directories="$(FStarOutputFolder)"/-->
+    <!-- Call FsYacc -->
+    <FStar
+			InputFiles="@(FStarBefore);@(FStar);@(FStarAfter)"			
+			>
+      <!-- Track outputs for 'Clean' -->
+      <!--Output TaskParameter="OutputFile" ItemName="FileWrites"/-->
+    </FStar>
+    <!-- Make sure it will get cleaned  -->
+    <!--CreateItem Include="$(FsYaccOutputFolder)%(FsYacc.Filename).fs">
+      <Output TaskParameter="Include" ItemName="FileWrites"/>
+    </CreateItem-->
+  </Target>
+  <ItemGroup>
+    
+    <AvailableItemName Include="FStar">
+      <Visible>false</Visible>
+    </AvailableItemName>
+  </ItemGroup>
+</Project>
