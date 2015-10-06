@@ -10,11 +10,8 @@
   </TemplateData>
   <TemplateContent>
     <Project File="FStarProject.fstarproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="true" OpenInEditor="true">
+      <ProjectItem TargetFileName="Program.fst" ReplaceParameters="false" OpenInEditor="true">
         Program.fst
-      </ProjectItem>
-      <ProjectItem ReplaceParameters="true" OpenInEditor="false">
-        AssemblyInfo.cs
       </ProjectItem>
     </Project>
   </TemplateContent>
