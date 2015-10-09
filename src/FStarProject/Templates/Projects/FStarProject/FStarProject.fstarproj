@@ -18,12 +18,12 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>bin\Release\</OutputPath>
   </PropertyGroup>
-  <ItemGroup>
+  <!--ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
+  </ItemGroup-->
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
   </PropertyGroup>
@@ -40,11 +40,9 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
-  <Import Project="C:\Users\User\VisualFStar\src\FStarBuildTask\bin\Debug\FStarBuildTask.targets"/>
-  <ItemGroup>
+  <Import Project="C:\gsv\projects\YC\FStar\VisualFStar\src\FStarBuildTask\bin\Debug\FStarBuildTask.targets"/>
+  <ItemGroup>    
     <FStar Include="Program.fst">
     </FStar>
-
   </ItemGroup>
-
 </Project>

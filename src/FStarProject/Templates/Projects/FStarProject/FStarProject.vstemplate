@@ -10,9 +10,9 @@
   </TemplateData>
   <TemplateContent>
     <Project File="FStarProject.fstarproj" ReplaceParameters="true">
-      <ProjectItem TargetFileName="Program.fst" ReplaceParameters="false" OpenInEditor="true">
+      <ProjectItem TargetFileName="Program.fst" ReplaceParameters="true" OpenInEditor="true">
         Program.fst
-      </ProjectItem>
+      </ProjectItem>      
     </Project>
   </TemplateContent>
 </VSTemplate>
