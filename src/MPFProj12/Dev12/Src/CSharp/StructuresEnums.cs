@@ -119,6 +119,7 @@ namespace Microsoft.VisualStudio.Project
         None,
         Compile,
         Content,
+        FStar,
         EmbeddedResource
     }
 

@@ -2978,7 +2978,8 @@ namespace Microsoft.VisualStudio.Project
             if (String.Compare(type, BuildAction.Compile.ToString(), StringComparison.OrdinalIgnoreCase) == 0
                 || String.Compare(type, BuildAction.Content.ToString(), StringComparison.OrdinalIgnoreCase) == 0
                 || String.Compare(type, BuildAction.EmbeddedResource.ToString(), StringComparison.OrdinalIgnoreCase) == 0
-                || String.Compare(type, BuildAction.None.ToString(), StringComparison.OrdinalIgnoreCase) == 0)
+                || String.Compare(type, BuildAction.None.ToString(), StringComparison.OrdinalIgnoreCase) == 0
+                || String.Compare(type, BuildAction.FStar.ToString(), StringComparison.OrdinalIgnoreCase) == 0)
                 return true;
 
             // we don't know about this type, so ignore it.
