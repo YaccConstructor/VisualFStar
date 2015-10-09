@@ -24,9 +24,24 @@ type FStar() as this =
             let args = items.[0].ToString()
             try
                 FStar.FStar.goInternal args
+                true
             with
-            | e -> printfn "Error: %A" e.Message
-            true
+            | e -> 
+                let error = 
+                    new BuildErrorEventArgs(
+                        subcategory = "error",
+                        code = "",
+                        file = args,
+                        lineNumber = 1,
+                        columnNumber = 1,
+                        endLineNumber = 1,
+                        endColumnNumber = 10,
+                        message = e.Message,
+                        helpKeyword = "",
+                        senderName = "FStar")
+                printfn "C:\sourcefile.cpp(134) : error C2143: syntax error : missing ';' before '}' %A" e.Message
+                engine.LogErrorEvent(error)
+                false            
         
         override this.HostObject
             with get () = host
