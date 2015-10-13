@@ -60,9 +60,9 @@
     <Compile Include="AssemblyInfo.fs" />
     <None Include="App.config" />
     <Compile Include="Program.fs" />
-    <None Include="FStarBuildTask.targets">
+    <Content Include="FStarBuildTask.targets">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Build.Framework" />
