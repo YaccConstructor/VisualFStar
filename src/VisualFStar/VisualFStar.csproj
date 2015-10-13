@@ -139,6 +139,12 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>BuiltProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
+    <ProjectReference Include="..\FStarProject\FStarProject.csproj">
+      <Project>{AFFA0191-42D6-4673-B80A-6943352F8D7F}</Project>
+      <Name>FStarProject</Name>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3bBuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
     <ProjectReference Include="..\VisualFStarCore\VisualFStarCore.fsproj">
       <Project>{d15fb8f5-a949-4c05-866b-ece1ec8125c5}</Project>
       <Name>VisualFStarCore</Name>

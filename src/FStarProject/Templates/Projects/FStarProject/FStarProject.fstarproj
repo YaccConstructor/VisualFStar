@@ -40,7 +40,10 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
-  <Import Project="C:\gsv\projects\YC\FStar\VisualFStar\src\FStarBuildTask\bin\Debug\FStarBuildTask.targets"/>
+  <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\FStar\1.0\FStarBuildTask.targets')">
+    <FStarTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\FStar\1.0\FStarBuildTask.targets</FStarTargetsPath>
+  </PropertyGroup>
+  <Import Project="$(FStarTargetsPath)"/>
   <ItemGroup>    
     <FStar Include="Program.fst">
     </FStar>

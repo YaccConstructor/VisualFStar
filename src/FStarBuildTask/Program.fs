@@ -22,7 +22,17 @@ type FStar() as this =
         override this.Execute() =
             
             let args = items.[0].ToString()
+
+            let eventArgs = 
+                {
+                    new CustomBuildEventArgs(message = args , helpKeyword = "", senderName = "FStar") 
+                    with member x.Equals(y) = false
+                }
+
+            engine.LogCustomEvent(eventArgs)
+
             try
+                FStar.Options.fstar_home_opt := Some @"C:\gsv\projects\YC\FStar\VisualFStar\FStar\"
                 FStar.FStar.goInternal args
                 true
             with
