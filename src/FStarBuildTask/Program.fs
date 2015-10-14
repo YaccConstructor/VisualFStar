@@ -3,12 +3,15 @@
 namespace FStarBuild
 
 open Microsoft.Build.Framework
+open Microsoft.Build.Utilities
+open Microsoft.VisualStudio.Shell
+open Microsoft.VisualStudio.Shell.Interop
 open System.IO
 open Microsoft.FSharp.Text
 open FStar
 
 [<Class>] 
-type FStar() as this =
+type FStar() as this =    
     let mutable engine = Unchecked.defaultof<IBuildEngine>
     let mutable host = Unchecked.defaultof<ITaskHost> 
     let mutable items = Array.empty<ITaskItem>
@@ -23,13 +26,22 @@ type FStar() as this =
             
             let args = items.[0].ToString()
 
-            let eventArgs = 
-                {
-                    new CustomBuildEventArgs(message = args , helpKeyword = "", senderName = "FStar") 
-                    with member x.Equals(y) = false
-                }
+            let output msg =        
+                // Get the output window
+                let outputWindow = Package.GetGlobalService(typeof<SVsOutputWindow>) :?> IVsOutputWindow
+ 
+                // Ensure that the desired pane is visible
+                let paneGuid = Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.BuildOutputPane_guid
+                let i,pane = outputWindow.GetPane(ref paneGuid)
+ 
+                // Output the message
+                pane.OutputString(msg) |> ignore
+                                
+            "Verification started."
+            |> output 
 
-            engine.LogCustomEvent(eventArgs)
+            "FStar " + args
+            |> output 
 
             try
                 FStar.Options.fstar_home_opt := Some @"C:\gsv\projects\YC\FStar\VisualFStar\FStar\"
@@ -39,7 +51,7 @@ type FStar() as this =
             | e -> 
                 let error = 
                     new BuildErrorEventArgs(
-                        subcategory = "error",
+                        subcategory = "Error",
                         code = "",
                         file = args,
                         lineNumber = 1,
@@ -49,7 +61,6 @@ type FStar() as this =
                         message = e.Message,
                         helpKeyword = "",
                         senderName = "FStar")
-                printfn "C:\sourcefile.cpp(134) : error C2143: syntax error : missing ';' before '}' %A" e.Message
                 engine.LogErrorEvent(error)
                 false            
         
@@ -60,7 +71,3 @@ type FStar() as this =
         override this.BuildEngine
             with get () = engine
             and set v =  engine <- v
-
-
-
-    
