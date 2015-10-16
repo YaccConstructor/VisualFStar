@@ -62,7 +62,7 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
-  <Import Project="C:\Users\User\VisualFStar\src\FStarBuildTask\bin\Debug\FStarBuildTask.targets"/>      
+  <Import Project="C:\Users\User\VisualFStar\src\FStarBuildTask\FStarBuildTask.targets"/>      
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Program.fs" />

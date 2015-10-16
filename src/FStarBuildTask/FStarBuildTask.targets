@@ -15,7 +15,9 @@
     <!--MakeDir Directories="$(FStarOutputFolder)"/-->
     <!-- Call FsYacc -->
     <FStar
-			InputFiles="@(FStarBefore);@(FStar);@(FStarAfter)"			
+			InputFiles="@(FStarBefore);@(FStar);@(FStarAfter)"
+      CommandLineArguments="$(CommandLineArguments)"
+      FStarHomePath="$(FStarHomePath)"
 			>
       <!-- Track outputs for 'Clean' -->
       <!--Output TaskParameter="OutputFile" ItemName="FileWrites"/-->

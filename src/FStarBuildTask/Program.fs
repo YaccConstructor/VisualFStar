@@ -15,16 +15,28 @@ type FStar() as this =
     let mutable engine = Unchecked.defaultof<IBuildEngine>
     let mutable host = Unchecked.defaultof<ITaskHost> 
     let mutable items = Array.empty<ITaskItem>
+    let mutable fstarHomePath = ""
+    let mutable commandLineArguments = ""
 
     [<Required>]
     member this.InputFiles
         with get () = items
         and set v = items <- v
             
+    [<Required>]
+    member this.FStarHomePath
+        with get () = fstarHomePath
+        and set v = fstarHomePath <- v
+
+    [<Required>]
+    member this.CommandLineArguments
+        with get () = commandLineArguments
+        and set v = commandLineArguments <- v
+
     interface ITask with
         override this.Execute() =
                     
-            let args =
+            let args = commandLineArguments + " " + 
                 //"\"" + System.IO.Path.Combine(engine.ProjectFileOfTaskNode, items.[0].ToString()) + "\"" 
                 items.[0].ToString()
                 + " --fstar_home " + "\"C:\\Program Files (x86)\\Microsoft SDKs\\FStar\\1.0\" "// + " --verify_module UntrustedClientCode "
