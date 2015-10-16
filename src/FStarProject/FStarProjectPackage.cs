@@ -42,7 +42,7 @@ namespace FStarProject
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
     [ProvideProjectFactory(typeof(FStarProject.Templates.Projects.FStarProject.FStarProjectFactory), null,
     "FStar Project Files (*.fstarproj);*.fstarproj", "fstarproj", "fstarproj",
-    ".\\NullPath", LanguageVsTemplate = "FStarProject")]
+    ".\\NullPath", LanguageVsTemplate = "FStar")]
     [Guid(FStarProjectPackageGuids.guidFStarProjectPkgString)]
     [ProvideObject(typeof(GeneralPropertyPage))]
     public sealed class FStarProjectPackage : ProjectPackage
