@@ -33,6 +33,9 @@ type FStar() as this =
         with get () = commandLineArguments
         and set v = commandLineArguments <- v
 
+    [<Required>]
+    member val FStarTargetsPath = "" with get, set
+
     interface ITask with
         override this.Execute() =
             let fStarHome = "\"" + this.FStarHomePath + "\""

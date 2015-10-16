@@ -18,6 +18,7 @@
 			InputFiles="@(FStarBefore);@(FStar);@(FStarAfter)"
       CommandLineArguments="$(CommandLineArguments)"
       FStarHomePath="$(FStarHomePath)"
+      FStarTargetsPath="$(FStarTargetsPath)"
 			>
       <!-- Track outputs for 'Clean' -->
       <!--Output TaskParameter="OutputFile" ItemName="FileWrites"/-->

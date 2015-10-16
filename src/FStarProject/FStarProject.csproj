@@ -63,6 +63,7 @@
     </ZipProject>
   </ItemGroup>
   <ItemGroup>
+    <ZipProject Include="Templates\Projects\FStarProject\FStarProject.ico" />
     <None Include="Key.snk" />
     <None Include="paket.references" />
     <None Include="source.extension.vsixmanifest">
@@ -78,7 +79,6 @@
     <Content Include="index.html" />
     <Content Include="Resources\FStarProjectPackage.ico" />
     <Content Include="stylesheet.css" />
-    <ZipProject Include="Templates\Projects\FStarProject\FStarProject.ico" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
