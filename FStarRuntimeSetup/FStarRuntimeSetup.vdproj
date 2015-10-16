@@ -16454,7 +16454,7 @@
                                 {
                                     "{9EF0B969-E518-4E46-987F-47570745A589}:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
                                     {
-                                    "Name" = "8:1.0"
+                                    "Name" = "8:0.0.1"
                                     "AlwaysCreate" = "11:FALSE"
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
@@ -17101,23 +17101,23 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FStarRuntime"
-        "ProductCode" = "8:{0F54596B-0C90-48D4-96C6-F0A1E9203834}"
-        "PackageCode" = "8:{FF346DC7-7F05-470E-BD32-E7F1E1ACAEBD}"
+        "ProductCode" = "8:{B7F75079-F8F7-4830-9776-0F7B2B0E58DC}"
+        "PackageCode" = "8:{C153D482-28E7-4D52-897B-8973342C00E3}"
         "UpgradeCode" = "8:{6211A0C1-4442-4378-BD7D-65B7F82AA075}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:MSR"
+        "ProductVersion" = "8:0.0.1"
+        "Manufacturer" = "8:Microsoft"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:FStarRuntime"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:MSR"
+        "ARPCONTACT" = "8:Microsoft"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:FStar runtime"
+        "ARPCOMMENTS" = "8:FStar language runtime"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
@@ -17623,7 +17623,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1A5E36BFF4E645D1B267E328427B4CD4"
             {
-            "SourcePath" = "8:..\\FStar\\src\\basic\\obj\\Debug\\basic.dll"
+            "SourcePath" = "8:..\\FStar\\src\\basic\\obj\\Release\\basic.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
@@ -17651,7 +17651,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_410AB9E1F8094E14B5F6BA13B9755C4D"
             {
-            "SourcePath" = "8:..\\FStar\\src\\tosmt\\obj\\Debug\\tosmt.dll"
+            "SourcePath" = "8:..\\FStar\\src\\tosmt\\obj\\Release\\tosmt.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
@@ -17679,7 +17679,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7A6DC14390F64107A074EA23236179EF"
             {
-            "SourcePath" = "8:..\\FStar\\src\\tc\\obj\\Debug\\tc.dll"
+            "SourcePath" = "8:..\\FStar\\src\\tc\\obj\\Release\\tc.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
@@ -17707,7 +17707,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8666D9986FBF426C8C5F300F28F2663E"
             {
-            "SourcePath" = "8:..\\FStar\\src\\absyn\\obj\\Debug\\absyn.dll"
+            "SourcePath" = "8:..\\FStar\\src\\absyn\\obj\\Release\\absyn.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
@@ -17763,7 +17763,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B035BE5156DB4B839E57FC760C918E14"
             {
-            "SourcePath" = "8:..\\FStar\\src\\parser\\obj\\Debug\\parser.dll"
+            "SourcePath" = "8:..\\FStar\\src\\parser\\obj\\Release\\parser.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
@@ -17791,7 +17791,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_BDE16C836F1643BB97A724E9A211ADFA"
             {
-            "SourcePath" = "8:..\\FStar\\src\\extraction\\obj\\Debug\\extraction.dll"
+            "SourcePath" = "8:..\\FStar\\src\\extraction\\obj\\Release\\extraction.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
@@ -17819,7 +17819,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F1780AB4C4654518BE06A81A87B73E98"
             {
-            "SourcePath" = "8:..\\FStar\\src\\fstar\\obj\\Debug\\FStar.exe"
+            "SourcePath" = "8:..\\FStar\\src\\fstar\\obj\\Release\\FStar.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
@@ -17847,7 +17847,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F33223674EF14CDA99CA97FBDA6E6337"
             {
-            "SourcePath" = "8:..\\FStar\\src\\format\\obj\\Debug\\format.dll"
+            "SourcePath" = "8:..\\FStar\\src\\format\\obj\\Release\\format.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
@@ -17875,7 +17875,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F58982209D08491BA312CA27E2463EB3"
             {
-            "SourcePath" = "8:..\\src\\FStarBuildTask\\obj\\Debug\\FStarBuildTask.exe"
+            "SourcePath" = "8:..\\src\\FStarBuildTask\\obj\\Release\\FStarBuildTask.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3E7E562B2F0F4A56B0CB3B0C04627DC4"
