@@ -35,11 +35,11 @@ type FStar() as this =
 
     interface ITask with
         override this.Execute() =
-                    
-            let args = commandLineArguments + " " + 
-                //"\"" + System.IO.Path.Combine(engine.ProjectFileOfTaskNode, items.[0].ToString()) + "\"" 
-                items.[0].ToString()
-                + " --fstar_home " + "\"C:\\Program Files (x86)\\Microsoft SDKs\\FStar\\1.0\" "// + " --verify_module UntrustedClientCode "
+            let fStarHome = "\"" + this.FStarHomePath + "\""
+            let args = 
+                commandLineArguments 
+                + " " + items.[0].GetMetadata "FullPath"
+                + " --fstar_home " + fStarHome
 
             let output msg =
                 // Get the output window
