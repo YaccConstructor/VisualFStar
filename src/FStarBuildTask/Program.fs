@@ -23,19 +23,55 @@ type FStar() as this =
             
     interface ITask with
         override this.Execute() =
-            
-            let args = items.[0].ToString()
+                    
+            let args =
+                //"\"" + System.IO.Path.Combine(engine.ProjectFileOfTaskNode, items.[0].ToString()) + "\"" 
+                items.[0].ToString()
+                + " --fstar_home " + "\"C:\\Program Files (x86)\\Microsoft SDKs\\FStar\\1.0\" "// + " --verify_module UntrustedClientCode "
 
-            let output msg =        
+            let output msg =
                 // Get the output window
                 let outputWindow = Package.GetGlobalService(typeof<SVsOutputWindow>) :?> IVsOutputWindow
- 
+                lock 
+                    outputWindow 
+                    (fun () -> 
                 // Ensure that the desired pane is visible
-                let paneGuid = Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.BuildOutputPane_guid
-                let i,pane = outputWindow.GetPane(ref paneGuid)
- 
-                // Output the message
-                pane.OutputString(msg) |> ignore
+                    let paneGuid = Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.BuildOutputPane_guid
+                    let i,pane = outputWindow.GetPane(ref paneGuid)                    
+                    // Output the message
+                    try
+                        //pane.OutputString("\n" + msg) |> ignore
+                        //let pos,body = msg.Split ':' |> fun a -> a.[0],a.[1]
+                        let regexp = System.Text.RegularExpressions.Regex("(.*)\(([0-9]+),([0-9]+)-([0-9]+),([0-9]+)\)(.*)")
+                        let m = regexp.Match(msg)
+                        if m.Success
+                        then
+                            let file, lnFrom, colFrom, lnTo, colTo, body =
+                        
+                                m.Groups.[1].Captures.[0].Value
+                                , int m.Groups.[2].Captures.[0].Value
+                                , int m.Groups.[3].Captures.[0].Value
+                                , int m.Groups.[4].Captures.[0].Value
+                                , int m.Groups.[5].Captures.[0].Value
+                                , m.Groups.[6].Captures.[0].Value.Trim().Trim(':')
+
+                            let error = 
+                                new BuildErrorEventArgs(
+                                    subcategory = "Error",
+                                    code = "",
+                                    file = file,
+                                    lineNumber = lnFrom,
+                                    columnNumber = colFrom,
+                                    endLineNumber = lnTo,
+                                    endColumnNumber = colTo,
+                                    message = body,
+                                    helpKeyword = "",
+                                    senderName = "FStar")
+                            engine.LogErrorEvent(error)
+                        else pane.OutputString("\n" + msg + "\n") |> ignore
+
+                    with
+                    | _ -> ())
                                 
             "Verification started."
             |> output 
@@ -44,9 +80,23 @@ type FStar() as this =
             |> output 
 
             try
-                FStar.Options.fstar_home_opt := Some @"C:\gsv\projects\YC\FStar\VisualFStar\FStar\"
-                FStar.FStar.goInternal args
-                true
+                //FStar.Options.fstar_home_opt := Some @"C:\gsv\projects\YC\FStar\VisualFStar\FStar\"
+                //FStar.FStar.goInternal args
+                let p = new System.Diagnostics.Process()                
+                p.StartInfo.FileName <- @"C:\Program Files (x86)\Microsoft SDKs\FStar\1.0\FStar.exe"
+                p.StartInfo.Arguments <- args
+                p.StartInfo.UseShellExecute <- false
+                p.StartInfo.RedirectStandardOutput <- true
+                p.StartInfo.RedirectStandardError <- true
+                //* Set your output and error (asynchronous) handlers
+                p.OutputDataReceived.Add(fun ea -> ea.Data |> output)
+                p.ErrorDataReceived.Add(fun ea -> ea.Data |> output)
+                //* Start process and handlers
+                p.Start()
+                p.BeginOutputReadLine()
+                p.BeginErrorReadLine()
+                p.WaitForExit()
+                p.ExitCode = 0                
             with
             | e -> 
                 let error = 
@@ -60,7 +110,7 @@ type FStar() as this =
                         endColumnNumber = 10,
                         message = e.Message,
                         helpKeyword = "",
-                        senderName = "FStar")
+                        senderName = "FStarBuilTask")
                 engine.LogErrorEvent(error)
                 false            
         

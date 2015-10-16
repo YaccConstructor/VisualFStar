@@ -24,7 +24,7 @@ type FStarScanner(buffer: IVsTextBuffer) as this =
         let lexbuf = Microsoft.FSharp.Text.Lexing.LexBuffer<char>.FromString str
         //let fs = new System.IO.StreamReader(fileName)
         let lexArgs = FStar.Parser.Lexhelp.mkLexargs ((fun () -> "."), fileName, "")
-        let tokenizer = FStar.LexFStar.token lexArgs 
+        let tokenizer = FStar.LexFStar.token lexArgs false
         let data =
             seq{while not lexbuf.IsPastEndOfStream do 
                     yield tokenizer lexbuf |> Some 
