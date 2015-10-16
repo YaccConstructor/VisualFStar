@@ -78,7 +78,7 @@ type FStar() as this =
                                     helpKeyword = "",
                                     senderName = "FStar")
                             engine.LogErrorEvent(error)
-                        else pane.OutputString("\n" + msg + "\n") |> ignore
+                        else pane.OutputString("\n> " + msg + "\n") |> ignore
 
                     with
                     | _ -> ())
