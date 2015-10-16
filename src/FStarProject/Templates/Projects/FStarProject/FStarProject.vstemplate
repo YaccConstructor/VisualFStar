@@ -1,12 +1,12 @@
 ﻿<VSTemplate Version="2.0.0" Type="Project"
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>FStarProject Application</Name>
+    <Name>FStar Application</Name>
     <Description>
-      A project for creating a FStarProject application
+      A project for creating simple FStar application
     </Description>
     <Icon>FStarProject.ico</Icon>
-    <ProjectType>FStarProject</ProjectType>
+    <ProjectType>FStar</ProjectType>
   </TemplateData>
   <TemplateContent>
     <Project File="FStarProject.fstarproj" ReplaceParameters="true">
