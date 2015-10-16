@@ -63,12 +63,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0A17FEB4F45942EDBF5C6CD493657B1A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0A231EB05B0D4C03A171D9D6FDABA081"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -82,12 +76,6 @@
         "Entry"
         {
         "MsmKey" = "8:_0B80538F83554A08AE4064744B43E3FE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0C1E2616EDCE42AB9445454F42A0B78F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -417,12 +405,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1F93AC55A189472FBFCF05ECD90D4BE2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_201850D5A46B47269170512821A48186"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -448,12 +430,6 @@
         "Entry"
         {
         "MsmKey" = "8:_20A836CBC2D44EE6AA0BF98FAECB1888"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_20D21971E974448695D001C1707BB46D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -621,12 +597,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_2D104225D14B4DA38E90292D6277D537"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2D2B364950834262A82C1ED2FE093901"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -717,12 +687,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_34439D9A62FA48CEBF8C1808A988FDE1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_348A9CAB4BCA42B6B8EE7F232C54F271"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -742,12 +706,6 @@
         "Entry"
         {
         "MsmKey" = "8:_34F495AF6ADC43DA82A03B6057D1BE2D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3570B6D06D894DF7A6627B9454702839"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -802,12 +760,6 @@
         "Entry"
         {
         "MsmKey" = "8:_37C60C2BFD0F4C48A99BB2EEA52A5D96"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_37C7345FF99E4CC0AD93742177C86B50"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -915,12 +867,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_407102614A2140A2935168F667A22BA1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_4092B03A52454ACB8FF2A3DADF56C5DE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -969,18 +915,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4261629D153F473FA4495F7A268D0197"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_42EABEE8F0164BA29975E64B2FC71BB7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_4315A304C97040CFBECFD7D7F3EB9318"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -988,12 +922,6 @@
         "Entry"
         {
         "MsmKey" = "8:_43949B9C5D3F43FB95E0423B63C7C294"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_43C501A2DC8544CB924E88D0D96703DF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1251,12 +1179,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_54B5B7FF5A4F4C5B9CBEB73FC8ECDC18"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_54BB6E4C7522483499C5712B4D296E05"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1492,12 +1414,6 @@
         "Entry"
         {
         "MsmKey" = "8:_61B35B616BE14610A2DB8CD6F8A816F8"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_624FA3630C554B289934E136D483FBE1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1749,12 +1665,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_753987F6CD694334A1AA26AF888BF594"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_75635C8F55914B179E18013BA65F2769"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1965,12 +1875,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_82650317B3EB4FF8A37B84F1B7BB841D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_82814BEA2FBB4040A89E00A88029C188"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2067,12 +1971,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_87431C1A505448A4A9FDE862B144CB8E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_875F88B8A56D49C5B7C4E2BA1C15F721"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2097,12 +1995,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_885760F4E1D54986A17E05D4344E2A07"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_88788C2B85984FB5B62B50E633410E9E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2122,12 +2014,6 @@
         "Entry"
         {
         "MsmKey" = "8:_88A6413CA96C4367AC2633DB3819E8CA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_88D8464509A7481F941C9E186AF5ACF5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2218,12 +2104,6 @@
         "Entry"
         {
         "MsmKey" = "8:_8DB1FA09B786405F98D6C8BD0AE8925C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8DBD5FBE5C2441FBA146507A3B3361C4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2338,12 +2218,6 @@
         "Entry"
         {
         "MsmKey" = "8:_91E4FD74644C425D85C959809B1CF765"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9236F436E4364ECA967B15E4E1260E08"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2529,12 +2403,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9F2F306D893845619ECF6A63E7FA05A4"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A03BC9134BDFEC64A6174746B71655CF"
         "OwnerKey" = "8:_82CC2C48E3C549D4ADA6E0892D04F010"
         "MsmSig" = "8:_UNDEFINED"
@@ -2589,12 +2457,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A16D6EA4FCD0418993CD12E8BB02E772"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A186E0C1459949CC909E1E92F50C1D49"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2620,12 +2482,6 @@
         "Entry"
         {
         "MsmKey" = "8:_A38FED0ACC4F44E9A2E54924C46C70BB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A3A161A4883F46D793675EF917A6E1DA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2895,12 +2751,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B5788190C1C74323BFDC30B59983481A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B582830579314A9B8A4DC607463B822A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2914,12 +2764,6 @@
         "Entry"
         {
         "MsmKey" = "8:_B67747C77AD148F4A6A102EC5871B64C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B69965A632F7457B803E2CBEA590BC06"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2986,12 +2830,6 @@
         "Entry"
         {
         "MsmKey" = "8:_BBB378087734466488B016642CE1EDB3"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BCBA41BF43184933BD89D2805D6AA040"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3423,12 +3261,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D78CF13E3D9142679771E8A12EADF5F4"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_D896D193B8EB4345A273719B1E65F20A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3580,12 +3412,6 @@
         "Entry"
         {
         "MsmKey" = "8:_E6D5458AB8754FC08B0AD9AE85697D49"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E6E0ABDA87D143B69EC6977A36187C44"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3789,12 +3615,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F28C8FAE1C0A4A5DB08F6D5722B48FA2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_F2B6A811CA8E46C1B3346B4434A9C6D3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3945,12 +3765,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FB8E8FE1B9624D548F8E7E9BF4258701"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FC9DAEA36B4B4ED6936392E759C92673"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3988,12 +3802,6 @@
         "Entry"
         {
         "MsmKey" = "8:_FE77B59CEA814205A3612FCC5F3D1D9B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FE9368E4A74845FEB022EED79224BB26"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -4300,26 +4108,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0A17FEB4F45942EDBF5C6CD493657B1A"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\examples.fst"
-            "TargetName" = "8:examples.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0A231EB05B0D4C03A171D9D6FDABA081"
             {
             "SourcePath" = "8:..\\FStar\\examples\\bug-reports\\bug274.fst"
@@ -4366,26 +4154,6 @@
             "TargetName" = "8:bug092.fst"
             "Tag" = "8:"
             "Folder" = "8:_23242FDA47F643B3A58ABEF52F8B3B91"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0C1E2616EDCE42AB9445454F42A0B78F"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\median.fst"
-            "TargetName" = "8:median.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -5460,26 +5228,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1F93AC55A189472FBFCF05ECD90D4BE2"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\rst.fst"
-            "TargetName" = "8:rst.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_201850D5A46B47269170512821A48186"
             {
             "SourcePath" = "8:..\\FStar\\lib\\crypto.fst"
@@ -5564,26 +5312,6 @@
             {
             "SourcePath" = "8:..\\FStar\\examples\\low-level\\sieve.fst"
             "TargetName" = "8:sieve.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_20D21971E974448695D001C1707BB46D"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\PrimsNonPrim.fst"
-            "TargetName" = "8:PrimsNonPrim.fst"
             "Tag" = "8:"
             "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
             "Condition" = "8:"
@@ -6151,26 +5879,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2D104225D14B4DA38E90292D6277D537"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\mvector.fsi"
-            "TargetName" = "8:mvector.fsi"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2D2B364950834262A82C1ED2FE093901"
             {
             "SourcePath" = "8:..\\FStar\\examples\\algorithms\\gc.fst"
@@ -6471,26 +6179,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_34439D9A62FA48CEBF8C1808A988FDE1"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\mill1.fst"
-            "TargetName" = "8:mill1.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_348A9CAB4BCA42B6B8EE7F232C54F271"
             {
             "SourcePath" = "8:..\\FStar\\lib\\list.fst"
@@ -6555,26 +6243,6 @@
             {
             "SourcePath" = "8:..\\FStar\\examples\\wysteria\\main.fst"
             "TargetName" = "8:main.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3570B6D06D894DF7A6627B9454702839"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\FStar_OrdSet.ml"
-            "TargetName" = "8:FStar_OrdSet.ml"
             "Tag" = "8:"
             "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
@@ -6757,26 +6425,6 @@
             "TargetName" = "8:system.fst"
             "Tag" = "8:"
             "Folder" = "8:_D5D8C6F3771345C089D0C7B85CAAA84C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_37C7345FF99E4CC0AD93742177C86B50"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\FFI.ml"
-            "TargetName" = "8:FFI.ml"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -7131,26 +6779,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_407102614A2140A2935168F667A22BA1"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\listset.fst"
-            "TargetName" = "8:listset.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4092B03A52454ACB8FF2A3DADF56C5DE"
             {
             "SourcePath" = "8:..\\FStar\\contrib\\CoreCrypto\\ml\\db\\DBMap.mli"
@@ -7291,46 +6919,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4261629D153F473FA4495F7A268D0197"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\lib.fst"
-            "TargetName" = "8:lib.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42EABEE8F0164BA29975E64B2FC71BB7"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\located.fst"
-            "TargetName" = "8:located.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4315A304C97040CFBECFD7D7F3EB9318"
             {
             "SourcePath" = "8:..\\FStar\\examples\\bug-reports\\bug021.fst"
@@ -7357,26 +6945,6 @@
             "TargetName" = "8:ext.fst"
             "Tag" = "8:"
             "Folder" = "8:_E00B12C5B3A24DD795473A706E3A6C7C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43C501A2DC8544CB924E88D0D96703DF"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\scopedWhile3.fst"
-            "TargetName" = "8:scopedWhile3.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -8231,26 +7799,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_54B5B7FF5A4F4C5B9CBEB73FC8ECDC18"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\Runtime.ml"
-            "TargetName" = "8:Runtime.ml"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_54BB6E4C7522483499C5712B4D296E05"
             {
             "SourcePath" = "8:..\\FStar\\examples\\bug-reports\\bug124.fst"
@@ -9048,26 +8596,6 @@
             "TargetName" = "8:short-circuit.fst"
             "Tag" = "8:"
             "Folder" = "8:_2F1DDF4E7A18438FA3D189E48B94EFA9"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_624FA3630C554B289934E136D483FBE1"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\withScope.fst"
-            "TargetName" = "8:withScope.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -9902,26 +9430,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_753987F6CD694334A1AA26AF888BF594"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\lref.fst"
-            "TargetName" = "8:lref.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_75635C8F55914B179E18013BA65F2769"
             {
             "SourcePath" = "8:..\\FStar\\examples\\unit-tests\\fact.fst"
@@ -10602,26 +10110,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82650317B3EB4FF8A37B84F1B7BB841D"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\test\\example1.fst"
-            "TargetName" = "8:example1.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_BC7AE1D5DE2E45309510CF0936E7F65F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82814BEA2FBB4040A89E00A88029C188"
             {
             "SourcePath" = "8:..\\FStar\\lib\\tcp.fst"
@@ -10933,26 +10421,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_87431C1A505448A4A9FDE862B144CB8E"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\sstCombinators.fst"
-            "TargetName" = "8:sstCombinators.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_875F88B8A56D49C5B7C4E2BA1C15F721"
             {
             "SourcePath" = "8:..\\FStar\\examples\\bignum\\addition.fst"
@@ -11017,26 +10485,6 @@
             {
             "SourcePath" = "8:..\\FStar\\examples\\low-level\\README.md"
             "TargetName" = "8:README.md"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_885760F4E1D54986A17E05D4344E2A07"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\regions.fst"
-            "TargetName" = "8:regions.fst"
             "Tag" = "8:"
             "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
             "Condition" = "8:"
@@ -11119,26 +10567,6 @@
             "TargetName" = "8:acls.fst"
             "Tag" = "8:"
             "Folder" = "8:_0E3C0C480E67476A91DABE411F41DDDC"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_88D8464509A7481F941C9E186AF5ACF5"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\wysteria.fst"
-            "TargetName" = "8:wysteria.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -11439,26 +10867,6 @@
             "TargetName" = "8:Seq.ml"
             "Tag" = "8:"
             "Folder" = "8:_5AE11FC4CE484E918D436D83E4C9324D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8DBD5FBE5C2441FBA146507A3B3361C4"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\misc.fst"
-            "TargetName" = "8:misc.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -11839,26 +11247,6 @@
             "TargetName" = "8:DHDB.fst"
             "Tag" = "8:"
             "Folder" = "8:_A9B60A30D9C44723BB9F9C01B17DAB06"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9236F436E4364ECA967B15E4E1260E08"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\tinterpreter.fst"
-            "TargetName" = "8:tinterpreter.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -12473,26 +11861,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9F2F306D893845619ECF6A63E7FA05A4"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\wysteria.fsi"
-            "TargetName" = "8:wysteria.fsi"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A03BC9134BDFEC64A6174746B71655CF"
             {
             "AssemblyRegister" = "3:1"
@@ -12568,26 +11936,6 @@
             {
             "SourcePath" = "8:..\\FStar\\examples\\wysteria\\sem.fst"
             "TargetName" = "8:sem.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A16D6EA4FCD0418993CD12E8BB02E772"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\sinterpreter.fst"
-            "TargetName" = "8:sinterpreter.fst"
             "Tag" = "8:"
             "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
@@ -12690,26 +12038,6 @@
             "TargetName" = "8:bug175.fst"
             "Tag" = "8:"
             "Folder" = "8:_23242FDA47F643B3A58ABEF52F8B3B91"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3A161A4883F46D793675EF917A6E1DA"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\gps.fst"
-            "TargetName" = "8:gps.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -13584,26 +12912,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B5788190C1C74323BFDC30B59983481A"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\mill5.fst"
-            "TargetName" = "8:mill5.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B582830579314A9B8A4DC607463B822A"
             {
             "SourcePath" = "8:..\\FStar\\lib\\allboot.fsti"
@@ -13650,26 +12958,6 @@
             "TargetName" = "8:tuple.fst"
             "Tag" = "8:"
             "Folder" = "8:_2F1DDF4E7A18438FA3D189E48B94EFA9"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B69965A632F7457B803E2CBEA590BC06"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\stack.fst"
-            "TargetName" = "8:stack.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -13890,26 +13178,6 @@
             "TargetName" = "8:bug067.fst"
             "Tag" = "8:"
             "Folder" = "8:_23242FDA47F643B3A58ABEF52F8B3B91"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BCBA41BF43184933BD89D2805D6AA040"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\mill3.fst"
-            "TargetName" = "8:mill3.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -15337,26 +14605,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D78CF13E3D9142679771E8A12EADF5F4"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\low-level\\mvector.fst"
-            "TargetName" = "8:mvector.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D896D193B8EB4345A273719B1E65F20A"
             {
             "SourcePath" = "8:..\\FStar\\contrib\\CoreCrypto\\INSTALL.md"
@@ -15863,26 +15111,6 @@
             "TargetName" = "8:array.fst"
             "Tag" = "8:"
             "Folder" = "8:_48394DBB5514451582E349C9B2130D8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6E0ABDA87D143B69EC6977A36187C44"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\ffi.fsi"
-            "TargetName" = "8:ffi.fsi"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -16537,26 +15765,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F28C8FAE1C0A4A5DB08F6D5722B48FA2"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\FStar_OrdMap.ml"
-            "TargetName" = "8:FStar_OrdMap.ml"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2B6A811CA8E46C1B3346B4434A9C6D3"
             {
             "SourcePath" = "8:..\\FStar\\examples\\low-level\\misc\\SSTAllHeap.ml"
@@ -17017,26 +16225,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FB8E8FE1B9624D548F8E7E9BF4258701"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\mill4.fst"
-            "TargetName" = "8:mill4.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FC9DAEA36B4B4ED6936392E759C92673"
             {
             "SourcePath" = "8:..\\FStar\\examples\\bug-reports\\bug176.fst"
@@ -17163,26 +16351,6 @@
             "TargetName" = "8:bug405.fst"
             "Tag" = "8:"
             "Folder" = "8:_23242FDA47F643B3A58ABEF52F8B3B91"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FE9368E4A74845FEB022EED79224BB26"
-            {
-            "SourcePath" = "8:..\\FStar\\examples\\wysteria\\mill2.fst"
-            "TargetName" = "8:mill2.fst"
-            "Tag" = "8:"
-            "Folder" = "8:_7E852AB863404A64991F7C88AB82872B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -17934,7 +17102,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FStarRuntime"
         "ProductCode" = "8:{0F54596B-0C90-48D4-96C6-F0A1E9203834}"
-        "PackageCode" = "8:{FF3D0588-087B-4CFB-BAA3-DE637A2023A5}"
+        "PackageCode" = "8:{FF346DC7-7F05-470E-BD32-E7F1E1ACAEBD}"
         "UpgradeCode" = "8:{6211A0C1-4442-4378-BD7D-65B7F82AA075}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
