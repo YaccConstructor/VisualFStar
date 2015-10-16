@@ -1,6 +1,4 @@
-﻿// Learn more about F# at http://fsharp.org
-// See the 'F# Tutorial' project for more help
-namespace FStarBuild
+﻿namespace FStarBuild
 
 open Microsoft.Build.Framework
 open Microsoft.Build.Utilities
@@ -27,8 +25,7 @@ type FStar() as this =
     member this.FStarHomePath
         with get () = fstarHomePath
         and set v = fstarHomePath <- v
-
-    [<Required>]
+    
     member this.CommandLineArguments
         with get () = commandLineArguments
         and set v = commandLineArguments <- v
@@ -38,25 +35,23 @@ type FStar() as this =
 
     interface ITask with
         override this.Execute() =
-            let fStarHome = "\"" + this.FStarHomePath + "\""
+            let fStarHome = "\"" + this.FStarHomePath.TrimEnd('\\') + "\""
             let args = 
-                commandLineArguments 
-                + " " + items.[0].GetMetadata "FullPath"
+                "\"" + items.[0].GetMetadata "FullPath" + "\""
                 + " --fstar_home " + fStarHome
+                + " " + if System.String.IsNullOrEmpty(commandLineArguments) then "" else commandLineArguments
 
             let output msg =
                 // Get the output window
                 let outputWindow = Package.GetGlobalService(typeof<SVsOutputWindow>) :?> IVsOutputWindow
                 lock 
-                    outputWindow 
+                    fStarHome 
                     (fun () -> 
                 // Ensure that the desired pane is visible
                     let paneGuid = Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.BuildOutputPane_guid
                     let i,pane = outputWindow.GetPane(ref paneGuid)                    
                     // Output the message
                     try
-                        //pane.OutputString("\n" + msg) |> ignore
-                        //let pos,body = msg.Split ':' |> fun a -> a.[0],a.[1]
                         let regexp = System.Text.RegularExpressions.Regex("(.*)\(([0-9]+),([0-9]+)-([0-9]+),([0-9]+)\)(.*)")
                         let m = regexp.Match(msg)
                         if m.Success
@@ -95,17 +90,19 @@ type FStar() as this =
             |> output 
 
             try
-                //FStar.Options.fstar_home_opt := Some @"C:\gsv\projects\YC\FStar\VisualFStar\FStar\"
-                //FStar.FStar.goInternal args
                 let p = new System.Diagnostics.Process()                
-                p.StartInfo.FileName <- @"C:\Program Files (x86)\Microsoft SDKs\FStar\1.0\FStar.exe"
-                p.StartInfo.Arguments <- args
-                p.StartInfo.UseShellExecute <- false
+                p.StartInfo.FileName <- System.IO.Path.Combine(System.IO.Path.GetDirectoryName this.FStarTargetsPath, "FStar.exe")
+                p.StartInfo.Arguments <- args                
                 p.StartInfo.RedirectStandardOutput <- true
                 p.StartInfo.RedirectStandardError <- true
+
                 //* Set your output and error (asynchronous) handlers
-                p.OutputDataReceived.Add(fun ea -> ea.Data |> output)
-                p.ErrorDataReceived.Add(fun ea -> ea.Data |> output)
+                p.OutputDataReceived.Add(fun e -> e.Data |> output)
+                p.ErrorDataReceived.Add(fun e -> e.Data |> output)
+
+                p.StartInfo.UseShellExecute <- false
+                p.StartInfo.CreateNoWindow <- true
+                p.StartInfo.WindowStyle <- System.Diagnostics.ProcessWindowStyle.Hidden                
                 //* Start process and handlers
                 p.Start()
                 p.BeginOutputReadLine()
