@@ -9,5 +9,5 @@ Support for [F* language](https://www.fstar-lang.org/) in Visual Studio IDE.
  * Install MSVS-2015
  * Install [Z3 4.4.0](https://github.com/Z3Prover/z3/releases)
  * Add path to Z3 binaries to system PATH variable
- * Install [FStar runtime](https://drive.google.com/file/d/0B2QL-2bhLX91YXo0MG1GZFljVGM/view?usp=sharing)
- * Install [FStar extension](https://drive.google.com/file/d/0B2QL-2bhLX91MTBVOTQ5WjZNTkE/view?usp=sharing)
+ * Install [FStar runtime (FStarRuntimeSetup.msi)](https://github.com/YaccConstructor/VisualFStar/releases/tag/v0.0.1)
+ * Install [FStar extension (VisualFStar.vsix)](https://github.com/YaccConstructor/VisualFStar/releases/tag/v0.0.1)
