@@ -3,7 +3,7 @@
   <Metadata>
     <Identity Id="VisualFStar.Company.12ff88eb-d120-45b5-84df-128c25045539" Version="1.0" Language="en-US" Publisher="YaccConstructor" />
     <DisplayName>VisualFStar</DisplayName>
-    <Description xml:space="preserve">FStar tools.F</Description>
+    <Description xml:space="preserve">FStar tools.</Description>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
@@ -25,5 +25,6 @@
     <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="FsLexYacc.Runtime.dll" AssemblyName="FsLexYacc.Runtime, Version=6.1.0.0, Culture=neutral, PublicKeyToken=null" />
     <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="FSharp.PowerPack.Compatibility.dll" AssemblyName="FSharp.PowerPack.Compatibility, Version=4.0.0.1, Culture=neutral, PublicKeyToken=f536804aa0eb945b" />
     <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="FSharp.PowerPack.dll" AssemblyName="FSharp.PowerPack, Version=4.0.0.1, Culture=neutral, PublicKeyToken=f536804aa0eb945b" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="FStarItem" d:TargetPath="|FStarItem;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />
   </Assets>
 </PackageManifest>

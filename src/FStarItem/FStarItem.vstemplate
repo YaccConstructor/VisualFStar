@@ -5,7 +5,7 @@
     <Description>FStarItem</Description>
     <Icon>FStarItem.ico</Icon>
     <TemplateID>928797a0-624c-45e7-b9a4-35c03b90bb70</TemplateID>
-    <ProjectType>FStarProject</ProjectType>
+    <ProjectType>FStar</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <DefaultName>FStarItem.fst</DefaultName>

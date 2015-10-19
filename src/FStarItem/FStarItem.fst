@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-$if$ ($targetframeworkversion$ >= 3.5)using System.Linq;
-$endif$using System.Text;
+﻿// More about FStar: https://www.fstar-lang.org/
 
-namespace $rootnamespace$
-{
-	class $safeitemrootname$
-	{
-	}
-}
+module Test
+
+let letSay = "Hello, World!"

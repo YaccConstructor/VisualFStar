@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="FStarProject.Company.3975de92-c842-4856-8566-f3d433b22831" Version="1.0" Language="en-US" Publisher="Company" />
+    <Identity Id="FStarProject.Company.3975de92-c842-4856-8566-f3d433b22831" Version="0.0.1" Language="en-US" Publisher="Company" />
     <DisplayName>FStarProject</DisplayName>
     <Description>Empty VSIX Project.</Description>
   </Metadata>
@@ -15,6 +15,5 @@
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\FStarItem.zip" />
   </Assets>
 </PackageManifest>

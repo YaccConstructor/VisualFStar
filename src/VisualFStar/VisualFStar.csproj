@@ -151,6 +151,13 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>BuiltProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
+    <ProjectReference Include="..\FStarItem\FStarItem.csproj">
+      <Project>{8C4CFF74-6744-4D9B-A7D6-7AD0CBF0115D}</Project>
+      <Name>FStarItem</Name>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
     <ProjectReference Include="..\FStarProject\FStarProject.csproj">
       <Project>{AFFA0191-42D6-4673-B80A-6943352F8D7F}</Project>
       <Name>FStarProject</Name>
