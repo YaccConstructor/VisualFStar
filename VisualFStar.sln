@@ -44,6 +44,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FStarBuildTask", "src\FStar
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FStarRuntimeSetup", "FStarRuntimeSetup\FStarRuntimeSetup.vdproj", "{1FBAF73F-3375-405A-B3D5-12A5408175E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FStarItem", "src\FStarItem\FStarItem.csproj", "{8C4CFF74-6744-4D9B-A7D6-7AD0CBF0115D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{F810A9D0-CD24-4824-8E21-3E0633427432}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1FBAF73F-3375-405A-B3D5-12A5408175E9}.Debug|Any CPU.ActiveCfg = Debug
 		{1FBAF73F-3375-405A-B3D5-12A5408175E9}.Release|Any CPU.ActiveCfg = Release
+		{8C4CFF74-6744-4D9B-A7D6-7AD0CBF0115D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4CFF74-6744-4D9B-A7D6-7AD0CBF0115D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4CFF74-6744-4D9B-A7D6-7AD0CBF0115D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4CFF74-6744-4D9B-A7D6-7AD0CBF0115D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

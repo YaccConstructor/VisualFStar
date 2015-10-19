@@ -64,6 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <ZipProject Include="Templates\Projects\FStarProject\FStarProject.ico" />
+    <None Include="FStarItem.zip" />
+    <Content Include="ItemTemplates\FStarItem.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="Key.snk" />
     <None Include="paket.references" />
     <None Include="source.extension.vsixmanifest">
