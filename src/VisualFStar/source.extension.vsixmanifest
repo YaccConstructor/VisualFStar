@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="VisualFStar.Company.12ff88eb-d120-45b5-84df-128c25045539" Version="1.0" Language="en-US" Publisher="Company" />
+    <Identity Id="VisualFStar.Company.12ff88eb-d120-45b5-84df-128c25045539" Version="1.0" Language="en-US" Publisher="YaccConstructor" />
     <DisplayName>VisualFStar</DisplayName>
-    <Description>Empty VSIX Project.</Description>
+    <Description xml:space="preserve">FStar tools.F</Description>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Enterprise" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
@@ -16,5 +17,13 @@
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
     <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="FStarProject" Path="|FStarProject;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="FStarProject" d:TargetPath="|FStarProject;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="%CurrentProject%Core" Path="|VisualFStarCore|" AssemblyName="|VisualFStarCore;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="absyn" Path="|absyn|" AssemblyName="|absyn;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="basic" Path="|basic|" AssemblyName="|basic;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="parser" Path="|parser|" AssemblyName="|parser;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="FsLexYacc.Runtime.dll" AssemblyName="FsLexYacc.Runtime, Version=6.1.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="FSharp.PowerPack.Compatibility.dll" AssemblyName="FSharp.PowerPack.Compatibility, Version=4.0.0.1, Culture=neutral, PublicKeyToken=f536804aa0eb945b" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="FSharp.PowerPack.dll" AssemblyName="FSharp.PowerPack, Version=4.0.0.1, Culture=neutral, PublicKeyToken=f536804aa0eb945b" />
   </Assets>
 </PackageManifest>

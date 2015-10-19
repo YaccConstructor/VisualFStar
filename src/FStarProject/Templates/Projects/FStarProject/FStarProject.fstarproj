@@ -41,8 +41,8 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
-  <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\FStar\1.0\FStarBuildTask.targets')">
-    <FStarTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\FStar\1.0\FStarBuildTask.targets</FStarTargetsPath>
+  <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\FStar\0.0.1\FStarBuildTask.targets')">
+    <FStarTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\FStar\0.0.1\FStarBuildTask.targets</FStarTargetsPath>
   </PropertyGroup>
   <Import Project="$(FStarTargetsPath)"/>
   <ItemGroup>    
