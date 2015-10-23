@@ -9,28 +9,14 @@ VisualFStar
 
 Documentation
 
-<div class="row">
-  <div class="span1"></div>
-  <div class="span6">
-    <div class="well well-small" id="nuget">
-      The VisualFStar library can be <a href="https://nuget.org/packages/VisualFStar">installed from NuGet</a>:
-      <pre>PM> Install-Package VisualFStar</pre>
-    </div>
-  </div>
-  <div class="span1"></div>
-</div>
+
 
 Example
 -------
 
-This example demonstrates using a function defined in this sample library.
+
 
 *)
-#r "VisualFStar.dll"
-open VisualFStar
-
-printfn "hello = %i" <| Library.hello 0
-
 (**
 Some more info
 
