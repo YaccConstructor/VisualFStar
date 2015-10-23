@@ -7,18 +7,17 @@
 VisualFStar
 ======================
 
-Documentation
+![Image of F* code](picts/FStar_how_to_3.png)
 
+Ho to install
+-------------
 
-
-Example
--------
-
-
-
-*)
-(**
-Some more info
+ * Install Microsoft Visual Studio 2015
+ * Check that tools for F# are installed
+ * Install [Z3 4.4.0](https://github.com/Z3Prover/z3/releases)
+ * Add path to Z3 binaries to system PATH variable
+ * Install [FStar runtime (FStarRuntimeSetup.msi)](https://github.com/YaccConstructor/VisualFStar/releases/)
+ * Install [FStar extension (VisualFStar.vsix)](https://github.com/YaccConstructor/VisualFStar/releases/)
 
 Samples & documentation
 -----------------------
@@ -29,9 +28,6 @@ The API reference is automatically generated from Markdown comments in the libra
 
  * [Tutorial](tutorial.html) contains a further explanation of this sample library.
 
- * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
-   and functions in the library. This includes additional brief samples on using most of the
-   functions.
  
 Contributing and copyright
 --------------------------
