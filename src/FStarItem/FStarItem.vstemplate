@@ -2,13 +2,13 @@
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <Name>FStarItem</Name>
-    <Description>FStarItem</Description>
+    <Description>FStar item template</Description>
     <Icon>FStarItem.ico</Icon>
     <TemplateID>928797a0-624c-45e7-b9a4-35c03b90bb70</TemplateID>
     <ProjectType>FStar</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
-    <DefaultName>FStarItem.fst</DefaultName>
+    <DefaultName>Program.fst</DefaultName>
   </TemplateData>
   <TemplateContent>
     <References>
@@ -16,6 +16,6 @@
         <Assembly>System</Assembly>
       </Reference>
     </References>
-    <ProjectItem ReplaceParameters="true">FStarItem.fst</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.fst" ItemType="FStar">Program.fst</ProjectItem>
   </TemplateContent>
 </VSTemplate>
