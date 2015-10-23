@@ -7,9 +7,9 @@
 VisualFStar
 ======================
 
-![Image of F* code](img/picts/FStar_how_to_3.png)
+![Image of F* code](img/pics/FStar_how_to_3.png)
 
-Ho to install
+How to install
 -------------
 
  * Install Microsoft Visual Studio 2015
