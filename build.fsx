@@ -342,7 +342,7 @@ Target "All" DoNothing
 //  ==> "GenerateReferenceDocs"
 //  ==> "GenerateDocs"
   ==> "All"
-//  =?> ("ReleaseDocs",isLocalBuild)
+  =?> ("ReleaseDocs",isLocalBuild)
 
 "All" 
 #if MONO
