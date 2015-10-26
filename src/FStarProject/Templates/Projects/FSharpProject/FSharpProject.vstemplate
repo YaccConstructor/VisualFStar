@@ -1,0 +1,21 @@
+﻿<VSTemplate Version="2.0.0" Type="Project"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>FStar Application</Name>
+    <Description>
+      A project for creating simple FStar application
+    </Description>
+    <Icon>FSharpProject.ico</Icon>
+    <ProjectType>FSharp</ProjectType>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="FSharpProject.fsproj" ReplaceParameters="true">
+      <ProjectItem ItemType="FStar" TargetFileName="Program.fst" ReplaceParameters="true" OpenInEditor="true">
+        Program.fst
+      </ProjectItem>
+      <ProjectItem ItemType="FSharp" TargetFileName="Program.fs" ReplaceParameters="true" OpenInEditor="true">
+        Program.fs
+      </ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

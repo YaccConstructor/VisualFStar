@@ -7,7 +7,7 @@
 VisualFStar
 ======================
 
-![Image of F* code](img/pics/FStar_how_to_3.png)
+![Image of F* code](img/pics/how_to_3.png)
 
 How to install
 -------------
