@@ -111,7 +111,7 @@ Target "AssemblyInfo" (fun _ ->
 // src folder to support multiple project outputs
 Target "CopyBinaries" (fun _ ->
     !! "src/**/*.??proj"
-    |>  Seq.filter (fun f -> not <| f.Contains "MPFProj")//f.EndsWith("myproj") || f.EndsWith("fstproj"))
+    |>  Seq.filter (fun f -> not (f.Contains "MPFProj" || f.Contains "Templates"))
     |>  Seq.map (fun f -> ((System.IO.Path.GetDirectoryName f) @@ "bin/Release", "bin" @@ (System.IO.Path.GetFileNameWithoutExtension f)))
     |>  Seq.iter (fun (fromDir, toDir) -> CopyDir toDir fromDir (fun _ -> true))
 )
@@ -342,7 +342,7 @@ Target "All" DoNothing
 //  ==> "GenerateReferenceDocs"
 //  ==> "GenerateDocs"
   ==> "All"
-  =?> ("ReleaseDocs",isLocalBuild)
+//    =?> ("ReleaseDocs",isLocalBuild)
 
 "All" 
 #if MONO
