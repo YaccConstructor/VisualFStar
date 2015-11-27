@@ -76,6 +76,9 @@ type FStarScanner(buffer: IVsTextBuffer) as this =
                 | ASSUME 
                 | MATCH
                 | WITH
+                | OF
+                | BEGIN
+                | END
                 | IN       -> 
                     tokenInfo.Type <- TokenType.Keyword                    
                     tokenInfo.Color <- TokenColor.Keyword                    

@@ -7,32 +7,17 @@
 VisualFStar
 ======================
 
-Documentation
+![Image of F* code](img/pics/how_to_3.png)
 
-<div class="row">
-  <div class="span1"></div>
-  <div class="span6">
-    <div class="well well-small" id="nuget">
-      The VisualFStar library can be <a href="https://nuget.org/packages/VisualFStar">installed from NuGet</a>:
-      <pre>PM> Install-Package VisualFStar</pre>
-    </div>
-  </div>
-  <div class="span1"></div>
-</div>
+How to install
+-------------
 
-Example
--------
-
-This example demonstrates using a function defined in this sample library.
-
-*)
-#r "VisualFStar.dll"
-open VisualFStar
-
-printfn "hello = %i" <| Library.hello 0
-
-(**
-Some more info
+ * Install Microsoft Visual Studio 2015
+ * Check that tools for F# are installed
+ * Install [Z3 4.4.0](https://github.com/Z3Prover/z3/releases)
+ * Add path to Z3 binaries to system PATH variable
+ * Install [FStar runtime (FStarRuntimeSetup.msi)](https://github.com/YaccConstructor/VisualFStar/releases/)
+ * Install [FStar extension (VisualFStar.vsix)](https://github.com/YaccConstructor/VisualFStar/releases/)
 
 Samples & documentation
 -----------------------
@@ -43,9 +28,6 @@ The API reference is automatically generated from Markdown comments in the libra
 
  * [Tutorial](tutorial.html) contains a further explanation of this sample library.
 
- * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
-   and functions in the library. This includes additional brief samples on using most of the
-   functions.
  
 Contributing and copyright
 --------------------------

@@ -50,12 +50,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="FStarProjectNode.cs" />
-    <Compile Include="FStarProjectPackage.cs" />
-    <Compile Include="FStarProjectPackageGuids.cs" />
-    <Compile Include="GeneralPropertyPage.cs" />
+    <Compile Include="FSharp\FSharpProjectFactory.cs" />
+    <Compile Include="FSharp\FSharpProjectNode.cs" />
+    <Compile Include="FSharp\FSharpProjectPackage.cs" />
+    <Compile Include="FSharp\FSharpProjectPackageGuids.cs" />
+    <Compile Include="FStar\FStarProjectNode.cs" />
+    <Compile Include="FStar\FStarProjectPackage.cs" />
+    <Compile Include="FStar\FStarProjectPackageGuids.cs" />
+    <Compile Include="FStar\GeneralPropertyPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FStarProjectFactory.cs" />
+    <Compile Include="FStar\FStarProjectFactory.cs" />
     <EmbeddedResource Include="Resources\FStarProjectNode.bmp" />
     <ZipProject Include="Templates\Projects\FStarProject\Program.fst" />
     <ZipProject Include="Templates\Projects\FStarProject\FStarProject.vstemplate">
@@ -63,23 +67,27 @@
     </ZipProject>
   </ItemGroup>
   <ItemGroup>
-    <ZipProject Include="Templates\Projects\FStarProject\FStarProject.ico" />
-    <None Include="FStarItem.zip" />
-    <Content Include="ItemTemplates\FStarItem.zip">
+    <ZipProject Include="Templates\Projects\FSharpProject\Program.fs" />
+    <ZipProject Include="Templates\Projects\FSharpProject\Program.fst" />
+    <ZipProject Include="Templates\Projects\FSharpProject\FSharpProject.fsproj">
+      <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\FStarProject\FStarProject.ico" />
     <None Include="Key.snk" />
     <None Include="paket.references" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Templates\Items\FStarItem\FStarItem.fst" />
     <ZipProject Include="Templates\Projects\FStarProject\FStarProject.fstarproj">
       <SubType>Designer</SubType>
     </ZipProject>
   </ItemGroup>
   <ItemGroup>
+    <ZipProject Include="Templates\Projects\FSharpProject\FSharpProject.vstemplate">
+      <SubType>Designer</SubType>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\FSharpProject\FSharpProject.ico" />
     <VSCTCompile Include="FStarProject.vsct" />
     <Content Include="index.html" />
     <Content Include="Resources\FStarProjectPackage.ico" />

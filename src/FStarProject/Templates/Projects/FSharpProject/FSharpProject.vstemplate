@@ -5,15 +5,17 @@
     <Description>
       A project for creating simple FStar application
     </Description>
-    <Icon>FStarProject.ico</Icon>
-    <ProjectType>FStar</ProjectType>
+    <Icon>FSharpProject.ico</Icon>
+    <ProjectType>FSharp</ProjectType>
   </TemplateData>
   <TemplateContent>
-    
-    <Project File="FStarProject.fstarproj" ReplaceParameters="true">
+    <Project File="FSharpProject.fsproj" ReplaceParameters="true">
       <ProjectItem ItemType="FStar" TargetFileName="Program.fst" ReplaceParameters="true" OpenInEditor="true">
         Program.fst
-      </ProjectItem>      
+      </ProjectItem>
+      <ProjectItem ItemType="FSharp" TargetFileName="Program.fs" ReplaceParameters="true" OpenInEditor="true">
+        Program.fs
+      </ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>
