@@ -79,7 +79,7 @@ namespace VisualFStar
             Core.FStarParser parser = new Core.FStarParser();
             var result = new TestAuthoringScope();
             var tokens = new List<TokenInfo>();
-            if (req.Sink.BraceMatching)
+            if (req.Sink.BraceMatching || ParseReason.MatchBraces == req.Reason || ParseReason.HighlightBraces == req.Reason)
             {
                 var scanner = GetScanner(null);
                 scanner.SetSource(req.Text, 0);
@@ -89,11 +89,11 @@ namespace VisualFStar
                 (scanner as VisualFStar.Core.FStarScanner).MatchPair(req.Sink, req.Text, line, col);
                 
             }
+            else parser.Parse(req);
             if (ParseReason.Check == req.Reason)
             {
                 Console.WriteLine("!!!!");
-            }
-            parser.Parse(req);                        
+            }            
             return result;
         }
 

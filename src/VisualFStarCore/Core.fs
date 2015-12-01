@@ -119,68 +119,66 @@ type FStarScanner(buffer: IVsTextBuffer) as this =
     member this.MatchPair (sink:AuthoringSink) str line col =
         let data,lexbuf = tokenize @"" str
         let enumerator = data.GetEnumerator()
-        let stack = new System.Collections.Generic.Stack<_>()
-        let stop = ref false        
+        let stackBrace = new System.Collections.Generic.Stack<_>()
+        let stackParen = new System.Collections.Generic.Stack<_>()
+        let stackBrack = new System.Collections.Generic.Stack<_>()
+        let stackBarBrack = new System.Collections.Generic.Stack<_>()
+        let stackLens = new System.Collections.Generic.Stack<_>()
+        let stop = ref false 
+        
+        let createSpan (pairPosition : Microsoft.FSharp.Text.Lexing.Position * Microsoft.FSharp.Text.Lexing.Position) =
+            let curBrStart = fst pairPosition
+            let curBrEnd = snd pairPosition
+            if line = lexbuf.StartPos.Line
+            then 
+                if col = lexbuf.StartPos.Column + 1 || col = curBrStart.Column + 1
+                then
+                    stop := true
+                    let mutable span1 = new TextSpan()
+                    let mutable span2 = new TextSpan()                                
+                    span1.iStartLine <- curBrStart.Line
+                    span1.iStartIndex <- curBrStart.Column
+                    span1.iEndLine <- curBrStart.Line
+                    span1.iEndIndex <- curBrEnd.Column                                
+                    span2.iStartLine <- lexbuf.StartPos.Line
+                    span2.iStartIndex <- lexbuf.StartPos.Column
+                    span2.iEndLine <- lexbuf.EndPos.Line
+                    span2.iEndIndex <- lexbuf.EndPos.Column
+                    sink.MatchPair (span1,span2,1)
+                              
         while not !stop do
             let t = enumerator.MoveNext()
-            if t 
-            then 
+            if not t
+            then stop := true 
+            else 
                 let token = enumerator.Current
                 match token with
                 | None -> ()
                 | Some token ->
                     match token with 
+                    
                     | LBRACE -> 
-                        stack.Push(lexbuf.StartPos, lexbuf.EndPos)
-                        
+                        stackBrace.Push(lexbuf.StartPos, lexbuf.EndPos)
                     | RBRACE -> 
-                        let curBrStart, curBrEnd = stack.Pop()
-                        if line = lexbuf.StartPos.Line
-                        then 
-                            if col = lexbuf.StartPos.Column + 1
-                            then
-                                stop := true
-
-                                let mutable span1 = new TextSpan()
-                                let mutable span2 = new TextSpan()                                
-                                span1.iStartLine <- curBrStart.Line
-                                span1.iStartIndex <- curBrStart.Column
-                                span1.iEndLine <- curBrStart.Line
-                                span1.iEndIndex <- curBrEnd.Column                                
-                                span2.iStartLine <- lexbuf.StartPos.Line
-                                span2.iStartIndex <- lexbuf.StartPos.Column
-                                span2.iEndLine <- lexbuf.EndPos.Line
-                                span2.iEndIndex <- lexbuf.EndPos.Column
-                                sink.MatchPair (span1,span2,1)                            
-
-
-                        
-                    | LPAREN -> stack.Push(lexbuf.StartPos, lexbuf.EndPos)
+                        createSpan <| stackBrace.Pop()
+                    | LPAREN -> 
+                        stackParen.Push((lexbuf.StartPos), lexbuf.EndPos)
                     | RPAREN ->
-                        let curBrStart, curBrEnd = stack.Pop()
-                        if line = lexbuf.StartPos.Line
-                        then 
-                            if col = lexbuf.StartPos.Column + 1
-                            then
-                                stop := true
-
-                                let mutable span1 = new TextSpan()
-                                let mutable span2 = new TextSpan()                                
-                                span1.iStartLine <- 3//curBrStart.Line
-                                span1.iStartIndex <- 1//curBrStart.Column
-                                span1.iEndLine <- 3 //curBrStart.Line
-                                span1.iEndIndex <- 2//curBrEnd.Column                                
-                                span2.iStartLine <- 3//lexbuf.StartPos.Line
-                                span2.iStartIndex <- 4//lexbuf.StartPos.Column
-                                span2.iEndLine <- 3//lexbuf.EndPos.Line
-                                span2.iEndIndex <- 5//lexbuf.EndPos.Column                                
-                                sink.MatchPair (span1, span2, 0)               
-//                    | LBRACK_BAR
-//                    | BAR_RBRACK
-//                    | LENS_PAREN_LEFT
-//                    | LENS_PAREN_RIGHT
-//                    | LBRACK
-//                    | RBRACK -> ()
+                        createSpan <| stackParen.Pop()
+                    | LBRACK_BAR -> 
+                        stackBarBrack.Push(lexbuf.StartPos, lexbuf.EndPos)
+                    | BAR_RBRACK ->
+                        createSpan <| stackBarBrack.Pop()
+                    | LENS_PAREN_LEFT ->
+                        stackLens.Push(lexbuf.StartPos, lexbuf.EndPos)
+                    | LENS_PAREN_RIGHT ->
+                        createSpan <| stackLens.Pop()
+                    | LBRACK -> 
+                        stackBrack.Push(lexbuf.StartPos, lexbuf.EndPos)
+                    | RBRACK -> 
+                        createSpan <| stackBrack.Pop()  
+                    | LPAREN_RPAREN ->
+                        createSpan <| (lexbuf.StartPos, lexbuf.EndPos)                   
                     | _ -> ()
       
 
