@@ -69,7 +69,7 @@ namespace VisualFStar
         {
             if (m_scanner == null)
             {
-                m_scanner = new Core.FStarScanner(buffer);
+                m_scanner = new Core.FStarScanner(buffer);                
             }
             return m_scanner;
         }
@@ -77,12 +77,24 @@ namespace VisualFStar
         public override AuthoringScope ParseSource(ParseRequest req)
         {
             Core.FStarParser parser = new Core.FStarParser();
+            var result = new TestAuthoringScope();
+            var tokens = new List<TokenInfo>();
+            if (req.Sink.BraceMatching)
+            {
+                var scanner = GetScanner(null);
+                scanner.SetSource(req.Text, 0);
+                var line = 0;
+                var col = 0;
+                req.View.GetCaretPos(out line, out col);
+                (scanner as VisualFStar.Core.FStarScanner).MatchPair(req.Sink, req.Text, line, col);
+                
+            }
             if (ParseReason.Check == req.Reason)
             {
                 Console.WriteLine("!!!!");
             }
             parser.Parse(req);                        
-            return new TestAuthoringScope();
+            return result;
         }
 
         public override string Name

@@ -24,12 +24,14 @@ type FStarScanner(buffer: IVsTextBuffer) as this =
         let lexbuf = Microsoft.FSharp.Text.Lexing.LexBuffer<char>.FromString str
         //let fs = new System.IO.StreamReader(fileName)
         let lexArgs = FStar.Parser.Lexhelp.mkLexargs ((fun () -> "."), fileName, "")
-        let tokenizer = FStar.LexFStar.token lexArgs false 
-        let data =
-            seq{while not lexbuf.IsPastEndOfStream do 
-                    yield tokenizer lexbuf |> Some 
-                yield None}
+        let tokenizer = FStar.LexFStar.token lexArgs false         
+        seq{while not lexbuf.IsPastEndOfStream do 
+                yield tokenizer lexbuf |> Some 
+            yield None}
+        , lexbuf
                         
+    let getTokenInfo (fileName:string) str =
+        let data,lexbuf = tokenize fileName str
         let enumerator = data.GetEnumerator()
         fun (tokenInfo:TokenInfo) state ->
             let token =
@@ -110,9 +112,78 @@ type FStarScanner(buffer: IVsTextBuffer) as this =
         member this.ScanTokenAndProvideInfoAboutIt(tokenInfo, state) =            
             getNextToken tokenInfo state           
 
-        member this.SetSource(source, offset) = 
+        member this.SetSource(source, offset) =  
             _source <- source.Substring(offset)
-            getNextToken <- tokenize @"" _source
+            getNextToken <- getTokenInfo @"" _source
+            
+    member this.MatchPair (sink:AuthoringSink) str line col =
+        let data,lexbuf = tokenize @"" str
+        let enumerator = data.GetEnumerator()
+        let stack = new System.Collections.Generic.Stack<_>()
+        let stop = ref false        
+        while not !stop do
+            let t = enumerator.MoveNext()
+            if t 
+            then 
+                let token = enumerator.Current
+                match token with
+                | None -> ()
+                | Some token ->
+                    match token with 
+                    | LBRACE -> 
+                        stack.Push(lexbuf.StartPos, lexbuf.EndPos)
+                        
+                    | RBRACE -> 
+                        let curBrStart, curBrEnd = stack.Pop()
+                        if line = lexbuf.StartPos.Line
+                        then 
+                            if col = lexbuf.StartPos.Column + 1
+                            then
+                                stop := true
+
+                                let mutable span1 = new TextSpan()
+                                let mutable span2 = new TextSpan()                                
+                                span1.iStartLine <- curBrStart.Line
+                                span1.iStartIndex <- curBrStart.Column
+                                span1.iEndLine <- curBrStart.Line
+                                span1.iEndIndex <- curBrEnd.Column                                
+                                span2.iStartLine <- lexbuf.StartPos.Line
+                                span2.iStartIndex <- lexbuf.StartPos.Column
+                                span2.iEndLine <- lexbuf.EndPos.Line
+                                span2.iEndIndex <- lexbuf.EndPos.Column
+                                sink.MatchPair (span1,span2,1)                            
+
+
+                        
+                    | LPAREN -> stack.Push(lexbuf.StartPos, lexbuf.EndPos)
+                    | RPAREN ->
+                        let curBrStart, curBrEnd = stack.Pop()
+                        if line = lexbuf.StartPos.Line
+                        then 
+                            if col = lexbuf.StartPos.Column + 1
+                            then
+                                stop := true
+
+                                let mutable span1 = new TextSpan()
+                                let mutable span2 = new TextSpan()                                
+                                span1.iStartLine <- 3//curBrStart.Line
+                                span1.iStartIndex <- 1//curBrStart.Column
+                                span1.iEndLine <- 3 //curBrStart.Line
+                                span1.iEndIndex <- 2//curBrEnd.Column                                
+                                span2.iStartLine <- 3//lexbuf.StartPos.Line
+                                span2.iStartIndex <- 4//lexbuf.StartPos.Column
+                                span2.iEndLine <- 3//lexbuf.EndPos.Line
+                                span2.iEndIndex <- 5//lexbuf.EndPos.Column                                
+                                sink.MatchPair (span1, span2, 0)               
+//                    | LBRACK_BAR
+//                    | BAR_RBRACK
+//                    | LENS_PAREN_LEFT
+//                    | LENS_PAREN_RIGHT
+//                    | LBRACK
+//                    | RBRACK -> ()
+                    | _ -> ()
+      
+
 
 type ParseResult =
     | Success of int
