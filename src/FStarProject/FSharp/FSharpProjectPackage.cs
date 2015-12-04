@@ -44,7 +44,8 @@ namespace FStarProject
     "FSharp Project Files (*.fsroj);*.fsproj", "fsproj", "fsproj",
     ".\\NullPath", LanguageVsTemplate = "FSharp")]
     [Guid(FSharpProjectPackageGuids.guidFSharpProjectPkgString)]
-    [ProvideObject(typeof(GeneralPropertyPage))]
+    [ProvideObject(typeof(FStarPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]
+    [ProvideObject(typeof(FStarPropertyPage))]
     public sealed class FSharpProjectPackage : ProjectPackage
     {
         /// <summary>

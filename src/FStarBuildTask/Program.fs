@@ -15,6 +15,7 @@ type FStar() as this =
     let mutable items = Array.empty<ITaskItem>
     let mutable fstarHomePath = ""
     let mutable commandLineArguments = ""
+    let mutable outputFile = ""
 
     [<Required>]
     member this.InputFiles
@@ -29,6 +30,11 @@ type FStar() as this =
     member this.CommandLineArguments
         with get () = commandLineArguments
         and set v = commandLineArguments <- v
+
+    [<Output>]
+    member this.OutputFile
+        with get ()  = outputFile
+        and  set (x) = outputFile <- x
 
     [<Required>]
     member val FStarTargetsPath = "" with get, set

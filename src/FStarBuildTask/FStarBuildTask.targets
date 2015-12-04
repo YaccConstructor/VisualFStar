@@ -7,13 +7,12 @@
 
   <Target
 		Name="CallFStarBuildTask"
-		Inputs="@(FStar);@(FStarBefore);@(FStarAfter)"
+		Inputs="@(FStarBefore);@(FStar);@(FStarAfter)"
 		Condition="'@(FStar)'!=''"
-    Outputs="d">
+    Outputs="@(Compile);@(FStar->'$(FStarOutputFolder)%(Filename).fs')">
 
     <!-- Create the output directory -->
-    <!--MakeDir Directories="$(FStarOutputFolder)"/-->
-    <!-- Call FsYacc -->
+    <MakeDir Directories="$(FStarOutputFolder)"/>    
     <FStar
 			InputFiles="@(FStarBefore);@(FStar);@(FStarAfter)"
       CommandLineArguments="$(CommandLineArguments)"
@@ -21,12 +20,12 @@
       FStarTargetsPath="$(FStarTargetsPath)"
 			>
       <!-- Track outputs for 'Clean' -->
-      <!--Output TaskParameter="OutputFile" ItemName="FileWrites"/-->
+      <Output TaskParameter="OutputFile" ItemName="FileWrites"/>
     </FStar>
     <!-- Make sure it will get cleaned  -->
-    <!--CreateItem Include="$(FsYaccOutputFolder)%(FsYacc.Filename).fs">
+    <CreateItem Include="$(FStarOutputFolder)%(FStar.Filename).fs">
       <Output TaskParameter="Include" ItemName="FileWrites"/>
-    </CreateItem-->
+    </CreateItem>
   </Target>
   <ItemGroup>
     

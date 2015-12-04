@@ -1243,12 +1243,29 @@ namespace Microsoft.VisualStudio.Project
             return VSConstants.S_OK;
         }
 
-        /// <summary>
-        /// Gets the properties of the project node. 
-        /// </summary>
-        /// <param name="propId">The __VSHPROPID of the property.</param>
-        /// <returns>A property dependent value. See: <see cref="__VSHPROPID"/> for details.</returns>
-        public override object GetProperty(int propId)
+        public override int GetProperty(uint itemId, int propId, out object property)
+        {
+            //Use propId to filter configuration-dependent property pages.
+            switch (propId)
+            {             
+            case (int)__VSHPROPID2.VSHPROPID_CfgPropertyPagesCLSIDList:
+            {
+                //Get a semicolon-delimited list of clsids of the configuration-dependent property pages.
+                ErrorHandler.ThrowOnFailure(base.GetProperty(itemId, propId, out property));
+                //Add the Deployment property page.
+                property += ';' + typeof(FStarProject.FStarPropertyPage).GUID.ToString("B");
+                        return base.GetProperty(itemId, propId, out property);
+                    }
+            }        
+    return base.GetProperty(itemId, propId, out property);
+    }
+
+    /// <summary>
+    /// Gets the properties of the project node. 
+    /// </summary>
+    /// <param name="propId">The __VSHPROPID of the property.</param>
+    /// <returns>A property dependent value. See: <see cref="__VSHPROPID"/> for details.</returns>
+    public override object GetProperty(int propId)
         {
             switch ((__VSHPROPID)propId)
             {

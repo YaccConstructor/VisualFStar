@@ -6,6 +6,7 @@
     <ProjectGuid></ProjectGuid>
     <OutputType>Exe</OutputType>
     <FStarHomePath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\FStar\0.0.1\</FStarHomePath>
+    <CommandLineArguments>--codegen FSharp</CommandLineArguments>
     <RootNamespace>$safeprojectname$</RootNamespace>
     <AssemblyName>MyAssemblyName</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -19,12 +20,9 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>bin\Release\</OutputPath>
   </PropertyGroup>
-  <!--ItemGroup>
-    <Reference Include="mscorlib" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup-->
+  <ItemGroup>
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
   </PropertyGroup>
@@ -48,6 +46,21 @@
   <ItemGroup>    
     <FStar Include="Program.fst">
     </FStar>
+    <Compile Include="$(FStarHomePath)\lib\fs\all.fs">
+      <Link>all.fs</Link>
+    </Compile>
+    <Compile Include="$(FStarHomePath)lib\fs\io.fs">
+      <Link>io.fs</Link>
+    </Compile>
+    <Compile Include="$(FStarHomePath)lib\fs\option.fs">
+      <Link>option.fs</Link>
+    </Compile>
+    <Compile Include="$(FStarHomePath)lib\fs\st.fs">
+      <Link>st.fs</Link>
+    </Compile>
+    <Compile Include="$(FStarHomePath)lib\fs\prims.fs">
+      <Link>prims.fs</Link>
+    </Compile>
     <Compile Include="Program.fs">
     </Compile>
   </ItemGroup>

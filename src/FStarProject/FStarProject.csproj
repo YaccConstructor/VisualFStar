@@ -54,6 +54,9 @@
     <Compile Include="FSharp\FSharpProjectNode.cs" />
     <Compile Include="FSharp\FSharpProjectPackage.cs" />
     <Compile Include="FSharp\FSharpProjectPackageGuids.cs" />
+    <Compile Include="FStarPropertyPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FStar\FStarProjectNode.cs" />
     <Compile Include="FStar\FStarProjectPackage.cs" />
     <Compile Include="FStar\FStarProjectPackageGuids.cs" />
