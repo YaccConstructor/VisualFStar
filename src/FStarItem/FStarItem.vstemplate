@@ -17,5 +17,7 @@
       </Reference>
     </References>
     <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.fst" ItemType="FStar">Program.fst</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.fst" ReplaceParameters="true"
+      ItemType="FStar">FStarItem.fst</ProjectItem>
   </TemplateContent>
 </VSTemplate>

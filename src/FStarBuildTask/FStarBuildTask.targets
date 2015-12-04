@@ -28,7 +28,6 @@
     </CreateItem>
   </Target>
   <ItemGroup>
-    
     <AvailableItemName Include="FStar">
       <Visible>false</Visible>
     </AvailableItemName>

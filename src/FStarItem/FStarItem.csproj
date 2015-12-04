@@ -80,7 +80,9 @@
     <ZipItem Include="FStarItem.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ZipItem Include="FStarItem.vstemplate" />
+    <ZipItem Include="FStarItem.vstemplate">
+      <SubType>Designer</SubType>
+    </ZipItem>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

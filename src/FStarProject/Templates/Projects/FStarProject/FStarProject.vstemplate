@@ -9,6 +9,7 @@
     <ProjectType>FStar</ProjectType>
   </TemplateData>
   <TemplateContent>
+    
     <Project File="FStarProject.fstarproj" ReplaceParameters="true">
       <ProjectItem ItemType="FStar" TargetFileName="Program.fst" ReplaceParameters="true" OpenInEditor="true">
         Program.fst
