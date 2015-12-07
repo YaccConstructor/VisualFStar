@@ -61,6 +61,7 @@ type FStarScanner(buffer: IVsTextBuffer) as this =
                 | THEN
                 | ELSE
                 | FUN
+                | FUNCTION
                 | MODULE
                 | TYPE
                 | REC
@@ -71,6 +72,7 @@ type FStarScanner(buffer: IVsTextBuffer) as this =
                 | FORALL                    
                 | REQUIRES
                 | ENSURES
+                | EXISTS
                 | EFFECT
                 | KIND
                 | OPEN
